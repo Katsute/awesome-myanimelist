@@ -1,0 +1,11 @@
+name: Bug Report
+description: Report an issue with this repository.
+labels: [bug]
+body:
+  - type: textarea
+    attributes:
+      label: Issue
+      description: |
+        Describe the issue and include steps to replicate if possible.
+    validations:
+      required: true

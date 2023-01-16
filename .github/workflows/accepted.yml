@@ -1,0 +1,70 @@
+name: ✔️ Accepted
+
+on:
+  issues:
+    types: [closed]
+
+jobs:
+  category:
+    name: ✔️ Accepted Category
+    runs-on: ubuntu-latest
+    if: contains(github.event.issue.labels.*.name, 'accepted') && contains(github.event.issue.labels.*.name, 'category request')
+    steps:
+      - name: 📄 Parse Body
+        uses: actions/github-script@v6
+        env:
+          BODY: ${{ github.event.issue.body }}
+        with:
+          github-token: ${{ secrets.TOKEN }}
+          script: core.exportVariable("CATEGORY", process.env.BODY.split(/\r?\n/gm)[1]);
+
+      - name: ✔️ Accepted Category
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          CATEGORY: ${{ env.CATEGORY }}
+        run: gh workflow run category.yml -f category=$CATEGORY
+
+
+  item:
+    name: ✔️ Accepted Repository
+    runs-on: ubuntu-latest
+    if: contains(github.event.issue.labels.*.name, 'accepted') && contains(github.event.issue.labels.*.name, 'repository request')
+    steps:
+      - name: 📄 Parse Body
+        uses: actions/github-script@v6
+        env:
+          BODY: ${{ github.event.issue.body }}
+        with:
+          github-token: ${{ secrets.TOKEN }}
+          script: |
+            core.exportVariable("REPOSITORY", process.env.BODY.split(/\r?\n/gm)[1]);
+            core.exportVariable("CATEGORY", process.env.BODY.split(/\r?\n/gm)[3]);
+
+      - name: ✔️ Accepted Repository
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          REPOSITORY: ${{ env.REPOSITORY }}
+          CATEGORY: ${{ env.CATEGORY }}
+        run: gh workflow run repository.yml -f repository=$REPOSITORY -f category=$CATEGORY
+
+  change:
+    name: ✔️ Accepted Change
+    runs-on: ubuntu-latest
+    if: contains(github.event.issue.labels.*.name, 'accepted') && contains(github.event.issue.labels.*.name, 'change request')
+    steps:
+      - name: 📄 Parse Body
+        uses: actions/github-script@v6
+        env:
+          BODY: ${{ github.event.issue.body }}
+        with:
+          github-token: ${{ secrets.TOKEN }}
+          script: |
+            core.exportVariable("REPOSITORY", process.env.BODY.split(/\r?\n/gm)[1]);
+            core.exportVariable("CATEGORY", process.env.BODY.split(/\r?\n/gm)[3]);
+
+      - name: ✔️ Accepted Change
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          REPOSITORY: ${{ env.REPOSITORY }}
+          CATEGORY: ${{ env.CATEGORY }}
+        run: gh workflow run change.yml -f repository=$REPOSITORY -f category=$CATEGORY

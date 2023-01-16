@@ -1,0 +1,45 @@
+# Automated form! Update corresponding workflow.
+name: Change Request
+description: Change or remove a listed repository.
+labels: [repository request]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Change requests are only permitted if you **own the repository** that is being changed. Do not submit a request if you are not the owner.
+
+  - type: input
+    attributes:
+      label: Repository
+      description: |
+        The repository owner and name. Example: `Katsute/awesome-myanimelist`
+    validations:
+      required: true
+
+  - type: dropdown
+    attributes:
+      label: Change Request
+      options:
+        - Modify this listing
+        - Remove this listing
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        If you are removing a listing you can skip the below section, otherwise please select which categories the repository should be listed under.
+
+  - type: dropdown
+    attributes:
+      label: Category
+      description: Which categories the repository should appear in.
+      multiple: true
+      options: []
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        Do not modify the above section after you submit your request, our workflows depend on a strict request format.

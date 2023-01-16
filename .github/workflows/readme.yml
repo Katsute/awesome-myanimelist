@@ -1,0 +1,45 @@
+name: ➕ README Update
+
+on:
+  workflow_dispatch:
+  # pull_request:
+  #   branches: [main]
+  #   types: [closed]
+  # schedule:
+  #   - cron: 0 12 * 1-2,11-12 *
+  #   - cron: 0 11 * 3-10 *
+
+jobs:
+  item:
+    name: ➕ Update README
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📤 Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.TOKEN }}
+
+      - name: 📚 Install Node
+        uses: actions/setup-node@v3
+        with:
+          architecture: x64
+          cache: npm
+          node-version: 19
+
+      - name: ➕ Write Changes
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.TOKEN }}
+          script: |
+            const fs = require("fs");
+            const path = require("path");
+
+        # todo: modify readme
+
+      - name: 📥 Commit Changes
+        run: |
+          git config --global user.name "Mashiro[bot]"
+          git config --global user.email "mashiro-san@users.noreply.github.com"
+          git add -u
+          git commit -m "Update README"
+          git push

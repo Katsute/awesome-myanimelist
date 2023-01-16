@@ -1,0 +1,30 @@
+name: 🔒 Issue Lock
+
+on:
+  issues:
+    types: [opened, reopened, closed]
+  pull_request:
+    types: [opened, reopened, closed]
+
+jobs:
+  lock:
+    name: 🔒 Lock Issue
+    runs-on: ubuntu-latest
+    if: github.event.action != 'closed'
+    steps:
+      - name: 🔒 Lock Issue
+        run: gh issue lock $ISSUE
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          ISSUE: ${{ github.event.issue.number }}
+
+  unlock:
+    name: 🔓 Unlock Issue
+    runs-on: ubuntu-latest
+    if: github.event.action == 'closed'
+    steps:
+      - name: 🔓 Unlock Issue
+        run: gh issue unlock $ISSUE
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          ISSUE: ${{ github.event.issue.number }}

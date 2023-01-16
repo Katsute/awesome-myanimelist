@@ -1,0 +1,87 @@
+name: ➕ Change Request
+
+on:
+  workflow_dispatch:
+    inputs:
+      repository:
+        required: true
+        description: Repository name, 'OWNER/REPO'
+        type: string
+      category:
+        required: true
+        description: Category, comma separated; Use 'DELETE' for deletion.
+        type: string
+
+jobs:
+  item:
+    name: ➕ Change Request
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📤 Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.TOKEN }}
+
+      - name: 📚 Install Node
+        uses: actions/setup-node@v3
+        with:
+          architecture: x64
+          cache: npm
+          node-version: 19
+
+      - name: ➕ Checkout New Branch
+        env:
+          REPOSITORY: ${{ github.event.inputs.repository }}
+        run: |
+          git checkout -B change/$REPOSITORY
+
+      - name: ➕ Write Changes
+        uses: actions/github-script@v6
+        env:
+          REPOSITORY: ${{ github.event.inputs.repository }}
+          CATEGORY: ${{ github.event.inputs.category }}
+        with:
+          github-token: ${{ secrets.TOKEN }}
+          script: |
+            const fs = require("fs");
+            const path = require("path");
+
+            const file = path.join(__dirname, "items.json");
+            let data = JSON.parse(fs.readFileSync(file, "utf-8"));
+
+            const repository = process.env.REPOSITORY;
+            const category = process.env.CATEGORY;
+
+            data = data.filter(item => item.name !== repository);
+
+            if(category != "DELETE")
+              data.push({
+                repository: repository,
+                category: category.split(",")
+              });
+
+            data.sort((a, b) => a.repository.toLowerCase() > b.repository.toLowerCase() ? 1 : -1);
+
+            fs.writeFileSync(file, JSON.stringify(data, null, 4));
+
+      - name: 📥 Commit Changes
+        env:
+          REPOSITORY: ${{ github.event.inputs.repository }}
+        run: |
+          git config --global user.name "Mashiro[bot]"
+          git config --global user.email "mashiro-san@users.noreply.github.com"
+          git add -u
+          git commit -m "Modify '$repository'"
+          git push
+
+      - name: 🟣 Create PR
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          REPOSITORY: ${{ github.event.inputs.repository }}
+        run: gh pr create -l "change request" -t "[Change] $REPOSITORY" -b "Automated change request for `$REPOSITORY`"
+
+      - name: 🚀 Dispatch README
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          REPOSITORY: ${{ github.event.inputs.repository }}
+        run: gh workflow run readme.yml -r change/$REPOSITORY

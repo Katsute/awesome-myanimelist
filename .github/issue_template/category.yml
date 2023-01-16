@@ -1,0 +1,30 @@
+# Automated form! Update corresponding workflow.
+name: Category Request
+description: Add a new category type to this list.
+labels: [category request]
+body:
+  - type: input
+    attributes:
+      label: Category
+      description: The proposed category name. Alphanumerics only.
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        Do not modify the above section after you submit your request, our workflows depend on a strict request format.
+
+  - type: textarea
+    attributes:
+      label: Reason
+      description: Explain why you think this category should be added.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Examples
+      description: Include a list of repositories that might appear in the proposed category (using ones already in this list is also acceptable).
+    validations:
+      required: true

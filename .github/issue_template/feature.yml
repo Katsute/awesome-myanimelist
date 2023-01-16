@@ -1,0 +1,27 @@
+name: Feature Request
+description: Suggestions for this repository.
+labels: [feature request]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This form is only for requesting new features, if you want to add a new category or repository please use one of the below forms:
+
+        * [Category Request](https://github.com/Katsute/awesome-myanimelist/issues/new?template=category.yml)
+        * [Repository Request](https://github.com/Katsute/awesome-myanimelist/issues/new?template=repository.yml)
+
+  - type: textarea
+    attributes:
+      label: Feature
+      description: |
+        Describe the feature.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Reason
+      description: |
+        Explain why this feature should be added.
+    validations:
+      required: true

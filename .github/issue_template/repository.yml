@@ -1,0 +1,36 @@
+# Automated form! Update corresponding workflow.
+name: Repository Request
+description: Add your repository to this list.
+labels: [repository request]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Repositories can only be submitted to this list if:
+
+        * They are related directly to MyAnimeList.
+        * At least 10 stars not including you.
+        * The most recent commit was within the last year.
+        * Less than 100 currently open issues.
+
+  - type: input
+    attributes:
+      label: Repository
+      description: |
+        The repository owner and name. Example: `Katsute/awesome-myanimelist`
+    validations:
+      required: true
+
+  - type: dropdown
+    attributes:
+      label: Category
+      description: Which categories the repository should appear in.
+      multiple: true
+      options: []
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        Do not modify the above section after you submit your request, our workflows depend on a strict request format.
