@@ -17,6 +17,11 @@ jobs:
     name: ➕ New Repository
     runs-on: ubuntu-latest
     steps:
+      - name: 📤 Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.TOKEN }}
+
       - name: 📚 Install Node
         uses: actions/setup-node@v3
         with:
@@ -27,7 +32,6 @@ jobs:
         env:
           REPOSITORY: ${{ github.event.inputs.repository }}
         run: |
-          git clone https://github.com/Katsute/awesome-myanimelist.git
           git checkout -B repository/$REPOSITORY
 
       - name: ➕ Write Changes
