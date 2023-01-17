@@ -52,10 +52,10 @@ jobs:
 
             fs.writeFileSync(file, JSON.stringify(data, null, 4));
 
-            const change = path.join(__dirname, ".github", "issue_template", "change.yml");
+            const change = path.join(__dirname, ".github", "ISSUE_TEMPLATE", "change.yml");
             fs.writeFileSync(change, (fs.readFileSync(change, "utf-8").replace(/options: ?\[.*]/gm, `options: [${data.join(',')}]`));
 
-            const repository = path.join(__dirname, ".github", "issue_template", "repository.yml");
+            const repository = path.join(__dirname, ".github", "ISSUE_TEMPLATE", "repository.yml");
             fs.writeFileSync(repository, (fs.readFileSync(repository, "utf-8").replace(/options: ?\[.*]/gm, `options: [${data.join(',')}]`));
 
       - name: 📥 Commit Changes
@@ -78,4 +78,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
           CATEGORY: ${{ github.event.inputs.category }}
-        run: gh workflow run readme.yml -r category/$CATEGORY
+        run: gh workflow run update.yml -r category/$CATEGORY

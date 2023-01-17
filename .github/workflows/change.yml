@@ -52,12 +52,12 @@ jobs:
             const repository = process.env.REPOSITORY;
             const category = process.env.CATEGORY;
 
-            data = data.filter(item => item.name !== repository);
+            data = data.filter(item => item.name.toLowerCase() !== repository.toLowerCase());
 
             if(category != "DELETE")
               data.push({
                 repository: repository,
-                category: category.split(",")
+                category: category.split(",").map(s => s.trim())
               });
 
             data.sort((a, b) => a.repository.toLowerCase() > b.repository.toLowerCase() ? 1 : -1);
@@ -84,4 +84,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
           REPOSITORY: ${{ github.event.inputs.repository }}
-        run: gh workflow run readme.yml -r change/$REPOSITORY
+        run: gh workflow run update.yml -r change/$REPOSITORY

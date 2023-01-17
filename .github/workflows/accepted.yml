@@ -1,4 +1,4 @@
-name: ✔️ Accepted
+name: ✔️ Accepted Change
 
 on:
   issues:
@@ -16,9 +16,9 @@ jobs:
           BODY: ${{ github.event.issue.body }}
         with:
           github-token: ${{ secrets.TOKEN }}
-          script: core.exportVariable("CATEGORY", process.env.BODY.split(/\r?\n/gm)[1]);
+          script: core.exportVariable("CATEGORY", process.env.BODY.split(/(\r?\n){2,}/gm)[1]);
 
-      - name: ✔️ Accepted Category
+      - name: 🚀 Dispatch Workflow
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
           CATEGORY: ${{ env.CATEGORY }}
@@ -37,10 +37,10 @@ jobs:
         with:
           github-token: ${{ secrets.TOKEN }}
           script: |
-            core.exportVariable("REPOSITORY", process.env.BODY.split(/\r?\n/gm)[1]);
-            core.exportVariable("CATEGORY", process.env.BODY.split(/\r?\n/gm)[3]);
+            core.exportVariable("REPOSITORY", process.env.BODY.split(/(\r?\n){2,}/gm)[1]);
+            core.exportVariable("CATEGORY", process.env.BODY.split(/(\r?\n){2,}/gm)[3]).replace(/- \[ ]/gm, "").split(/\r?\n).join(","));
 
-      - name: ✔️ Accepted Repository
+      - name: 🚀 Dispatch Workflow
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
           REPOSITORY: ${{ env.REPOSITORY }}
@@ -59,10 +59,10 @@ jobs:
         with:
           github-token: ${{ secrets.TOKEN }}
           script: |
-            core.exportVariable("REPOSITORY", process.env.BODY.split(/\r?\n/gm)[1]);
-            core.exportVariable("CATEGORY", process.env.BODY.split(/\r?\n/gm)[3]);
+            core.exportVariable("REPOSITORY", process.env.BODY.split(/(\r?\n){2,}/gm)[1]);
+            core.exportVariable("CATEGORY", process.env.BODY.split(/(\r?\n){2,}/gm)[3]).replace(/- \[ ]/gm, "").split(/\r?\n).join(","));
 
-      - name: ✔️ Accepted Change
+      - name: 🚀 Dispatch Workflow
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
           REPOSITORY: ${{ env.REPOSITORY }}
