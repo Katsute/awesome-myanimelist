@@ -7,10 +7,10 @@ on:
     types: [opened, reopened, closed]
 
 jobs:
-  lock:
+  lock-issue:
     name: 🔒 Lock Issue
     runs-on: ubuntu-latest
-    if: github.event.action != 'closed'
+    if: github.event.action != 'closed' && github.event.issue
     steps:
       - name: 🔒 Lock Issue
         run: gh issue lock $ISSUE
@@ -18,13 +18,35 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
           ISSUE: ${{ github.event.issue.number }}
 
-  unlock:
+  unlock-issue:
     name: 🔓 Unlock Issue
     runs-on: ubuntu-latest
-    if: github.event.action == 'closed'
+    if: github.event.action == 'closed' && github.event.issue
     steps:
       - name: 🔓 Unlock Issue
         run: gh issue unlock $ISSUE
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
           ISSUE: ${{ github.event.issue.number }}
+
+  lock-pr:
+    name: 🔒 Lock Pull Request
+    runs-on: ubuntu-latest
+    if: github.event.action != 'closed' && github.event.pull_request
+    steps:
+      - name: 🔒 Lock Issue
+        run: gh pr lock $ISSUE
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          ISSUE: ${{ github.event.pull_request.number }}
+
+  unlock-pr:
+    name: 🔓 Unlock Pull Request
+    runs-on: ubuntu-latest
+    if: github.event.action == 'closed' && github.event.pull_request
+    steps:
+      - name: 🔓 Unlock Issue
+        run: gh pr unlock $ISSUE
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          ISSUE: ${{ github.event.pull_request.number }}
