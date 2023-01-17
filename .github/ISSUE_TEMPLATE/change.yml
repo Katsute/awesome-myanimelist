@@ -35,7 +35,7 @@ body:
       label: Category
       description: Which categories the repository should appear in.
       multiple: true
-      options: []
+      options: [api]
     validations:
       required: false
 
