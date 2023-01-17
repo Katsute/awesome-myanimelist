@@ -52,11 +52,11 @@ jobs:
 
             fs.writeFileSync(file, JSON.stringify(data, null, 4));
 
-            const change = path.join(__dirname, ".github", "ISSUE_TEMPLATE", "change.yml");
-            fs.writeFileSync(change, (fs.readFileSync(change, "utf-8").replace(/options: ?\[.*]/gm, `options: [${data.join(',')}]`)));
-
-            const repository = path.join(__dirname, ".github", "ISSUE_TEMPLATE", "repository.yml");
+            const repository = path.join(__dirname, ".github", "ISSUE_TEMPLATE", "1-repository.yml");
             fs.writeFileSync(repository, (fs.readFileSync(repository, "utf-8").replace(/options: ?\[.*]/gm, `options: [${data.join(',')}]`)));
+
+            const change = path.join(__dirname, ".github", "ISSUE_TEMPLATE", "2-change.yml");
+            fs.writeFileSync(change, (fs.readFileSync(change, "utf-8").replace(/options: ?\[.*]/gm, `options: [${data.join(',')}]`)));
 
       - name: 📥 Commit Changes
         env:
