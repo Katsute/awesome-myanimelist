@@ -23,7 +23,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           architecture: x64
-          cache: npm
           node-version: 19
 
       - name: ➕ Write Changes

@@ -1,5 +1,5 @@
 # Automated form! Update corresponding workflow.
-name: Repository Request
+name: ➕ Repository Request
 description: Add your repository to this list.
 labels: [repository request]
 body:

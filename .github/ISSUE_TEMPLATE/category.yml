@@ -1,5 +1,5 @@
 # Automated form! Update corresponding workflow.
-name: Category Request
+name: ➕ Category Request
 description: Add a new category type to this list.
 labels: [category request]
 body:
