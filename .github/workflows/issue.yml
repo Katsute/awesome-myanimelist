@@ -10,7 +10,7 @@ jobs:
   lock-issue:
     name: 🔒 Lock Issue
     runs-on: ubuntu-latest
-    if: github.event.action != 'closed' && github.event.issue
+    if: github.event.action == 'closed' && github.event.issue
     steps:
       - name: 📤 Checkout Repository
         uses: actions/checkout@v3
@@ -26,7 +26,7 @@ jobs:
   unlock-issue:
     name: 🔓 Unlock Issue
     runs-on: ubuntu-latest
-    if: github.event.action == 'closed' && github.event.issue
+    if: github.event.action != 'closed' && github.event.issue
     steps:
       - name: 📤 Checkout Repository
         uses: actions/checkout@v3
@@ -42,7 +42,7 @@ jobs:
   lock-pr:
     name: 🔒 Lock Pull Request
     runs-on: ubuntu-latest
-    if: github.event.action != 'closed' && github.event.pull_request
+    if: github.event.action == 'closed' && github.event.pull_request
     steps:
       - name: 📤 Checkout Repository
         uses: actions/checkout@v3
@@ -58,7 +58,7 @@ jobs:
   unlock-pr:
     name: 🔓 Unlock Pull Request
     runs-on: ubuntu-latest
-    if: github.event.action == 'closed' && github.event.pull_request
+    if: github.event.action != 'closed' && github.event.pull_request
     steps:
       - name: 📤 Checkout Repository
         uses: actions/checkout@v3

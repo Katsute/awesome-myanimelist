@@ -21,7 +21,7 @@ jobs:
           BODY: ${{ github.event.issue.body }}
         with:
           github-token: ${{ secrets.TOKEN }}
-          script: core.exportVariable("CATEGORY", process.env.BODY.split(/(\r?\n){2,}/gm)[1]);
+          script: core.exportVariable("CATEGORY", process.env.BODY.split(/(?:\r?\n){2,}/gm)[1]);
 
       - name: 🚀 Dispatch Workflow
         env:
@@ -47,8 +47,8 @@ jobs:
         with:
           github-token: ${{ secrets.TOKEN }}
           script: |
-            core.exportVariable("REPOSITORY", process.env.BODY.split(/(\r?\n){2,}/gm)[1]);
-            core.exportVariable("CATEGORY", process.env.BODY.split(/(\r?\n){2,}/gm)[3]).replace(/- \[ ]/gm, "").split(/\r?\n).join(","));
+            core.exportVariable("REPOSITORY", process.env.BODY.split(/(?:\r?\n){2,}/gm)[1]);
+            core.exportVariable("CATEGORY", process.env.BODY.split(/(?:\r?\n){2,}/gm)[3]).replace(/- \[ ]/gm, "").split(/\r?\n).join(","));
 
       - name: 🚀 Dispatch Workflow
         env:
@@ -74,8 +74,8 @@ jobs:
         with:
           github-token: ${{ secrets.TOKEN }}
           script: |
-            core.exportVariable("REPOSITORY", process.env.BODY.split(/(\r?\n){2,}/gm)[1]);
-            core.exportVariable("CATEGORY", process.env.BODY.split(/(\r?\n){2,}/gm)[3]).replace(/- \[ ]/gm, "").split(/\r?\n).join(","));
+            core.exportVariable("REPOSITORY", process.env.BODY.split(/(?:\r?\n){2,}/gm)[1]);
+            core.exportVariable("CATEGORY", process.env.BODY.split(/(?:\r?\n){2,}/gm)[3]).replace(/- \[ ]/gm, "").split(/\r?\n).join(","));
 
       - name: 🚀 Dispatch Workflow
         env:

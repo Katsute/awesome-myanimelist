@@ -22,7 +22,7 @@ jobs:
         with:
           github-token: ${{ secrets.TOKEN }}
           script: |
-            core.exportVariable("REPOSITORY", process.env.BODY.split(/(\r?\n){2,}/gm)[1]);
+            core.exportVariable("REPOSITORY", process.env.BODY.split(/(?:\r?\n){2,}/gm)[1]);
 
       - name: 💬 Post Comment
         run: |
