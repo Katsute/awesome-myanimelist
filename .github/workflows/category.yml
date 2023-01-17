@@ -13,12 +13,6 @@ jobs:
     name: ➕ New Category
     runs-on: ubuntu-latest
     steps:
-      - name: 📤 Checkout Repository
-        uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.TOKEN }}
-          fetch-depth: 0
-
       - name: 📚 Install Node
         uses: actions/setup-node@v3
         with:
@@ -29,7 +23,8 @@ jobs:
         env:
           CATEGORY: ${{ github.event.inputs.category }}
         run: |
-          git checkout -B category/$CATEGORY -t origin
+          git clone https://github.com/Katsute/awesome-myanimelist.git
+          git checkout -B category/$CATEGORY
 
       - name: ➕ Write Changes
         uses: actions/github-script@v6
