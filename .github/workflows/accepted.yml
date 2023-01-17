@@ -10,6 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     if: contains(github.event.issue.labels.*.name, 'accepted') && contains(github.event.issue.labels.*.name, 'category request')
     steps:
+      - name: 📤 Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.TOKEN }}
+
       - name: 📄 Parse Body
         uses: actions/github-script@v6
         env:
@@ -30,6 +35,11 @@ jobs:
     runs-on: ubuntu-latest
     if: contains(github.event.issue.labels.*.name, 'accepted') && contains(github.event.issue.labels.*.name, 'repository request')
     steps:
+      - name: 📤 Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.TOKEN }}
+
       - name: 📄 Parse Body
         uses: actions/github-script@v6
         env:
@@ -52,6 +62,11 @@ jobs:
     runs-on: ubuntu-latest
     if: contains(github.event.issue.labels.*.name, 'accepted') && contains(github.event.issue.labels.*.name, 'change request')
     steps:
+      - name: 📤 Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.TOKEN }}
+
       - name: 📄 Parse Body
         uses: actions/github-script@v6
         env:

@@ -1,0 +1,33 @@
+name: 💬 Repository Reference
+
+on:
+  issues:
+    types: [opened, reopened]
+
+jobs:
+  lock-issue:
+    name: 💬 Repository Reference
+    runs-on: ubuntu-latest
+    if: contains(github.event.issue.labels.*.name, 'repository request') || contains(github.event.issue.labels.*.name, 'change request')
+    steps:
+      - name: 📤 Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.TOKEN }}
+
+      - name: 📄 Parse Body
+        uses: actions/github-script@v6
+        env:
+          BODY: ${{ github.event.issue.body }}
+        with:
+          github-token: ${{ secrets.TOKEN }}
+          script: |
+            core.exportVariable("REPOSITORY", process.env.BODY.split(/(\r?\n){2,}/gm)[1]);
+
+      - name: 💬 Post Comment
+        run: |
+          gh issue comment $ISSUE "Repository: [``$REPOSITORY``](https://github.com/$REPOSITORY)"
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          ISSUE: ${{ github.event.issue.number }}
+          REPOSITORY: ${{ env.REPOSITORY }}

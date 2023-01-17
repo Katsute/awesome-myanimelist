@@ -12,6 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.action != 'closed' && github.event.issue
     steps:
+      - name: 📤 Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.TOKEN }}
+
       - name: 🔒 Lock Issue
         run: gh issue lock $ISSUE
         env:
@@ -23,6 +28,11 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.action == 'closed' && github.event.issue
     steps:
+      - name: 📤 Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.TOKEN }}
+
       - name: 🔓 Unlock Issue
         run: gh issue unlock $ISSUE
         env:
@@ -34,6 +44,11 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.action != 'closed' && github.event.pull_request
     steps:
+      - name: 📤 Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.TOKEN }}
+
       - name: 🔒 Lock Issue
         run: gh pr lock $ISSUE
         env:
@@ -45,6 +60,11 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.action == 'closed' && github.event.pull_request
     steps:
+      - name: 📤 Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.TOKEN }}
+
       - name: 🔓 Unlock Issue
         run: gh pr unlock $ISSUE
         env:
