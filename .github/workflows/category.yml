@@ -62,7 +62,7 @@ jobs:
         env:
           CATEGORY: ${{ github.event.inputs.category }}
         run: |
-          git config --global user.name "Mashiro[bot]"
+          git config --global user.name "mashiro-san"
           git config --global user.email "mashiro-san@users.noreply.github.com"
           git add -u
           git commit -m "Add new category '$CATEGORY'"
@@ -72,7 +72,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
           CATEGORY: ${{ github.event.inputs.category }}
-        run: gh pr create -l "category request" -t "[New Category] $CATEGORY" -b "Automated category request for ``$CATEGORY``"
+        run: gh pr create -l "category request" -t "[New Category] $CATEGORY" -b "Automated category request for '$CATEGORY'"
 
       - name: 🚀 Dispatch README
         env:

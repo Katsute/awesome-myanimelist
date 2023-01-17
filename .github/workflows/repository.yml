@@ -67,7 +67,7 @@ jobs:
         env:
           REPOSITORY: ${{ github.event.inputs.repository }}
         run: |
-          git config --global user.name "Mashiro[bot]"
+          git config --global user.name "mashiro-san"
           git config --global user.email "mashiro-san@users.noreply.github.com"
           git add -u
           git commit -m "Add new repository '$REPOSITORY'"
@@ -77,7 +77,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
           REPOSITORY: ${{ github.event.inputs.repository }}
-        run: gh pr create -l "repository request" -t "[New Repository] $REPOSITORY" -b "Automated repository request for [``$REPOSITORY``](https://github.com/$REPOSITORY)"
+        run: gh pr create -l "repository request" -t "[New Repository] $REPOSITORY" -b "Automated repository request for ['$REPOSITORY'](https://github.com/$REPOSITORY)"
 
       - name: 🚀 Dispatch README
         env:
