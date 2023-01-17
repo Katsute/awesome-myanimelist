@@ -40,7 +40,7 @@ jobs:
             const fs = require("fs");
             const path = require("path");
 
-            const file = path.join(__dirname, "categories.json");
+            const file = path.join(github.workspace, "categories.json");
             let data = JSON.parse(fs.readFileSync(file, "utf-8"));
 
             const category = process.env.CATEGORY;
@@ -51,11 +51,11 @@ jobs:
 
             fs.writeFileSync(file, JSON.stringify(data, null, 4));
 
-            const change = path.join(__dirname, ".github", "ISSUE_TEMPLATE", "change.yml");
-            fs.writeFileSync(change, (fs.readFileSync(change, "utf-8").replace(/options: ?\[.*]/gm, `options: [${data.join(',')}]`));
+            const change = path.join(github.workspace, ".github", "ISSUE_TEMPLATE", "change.yml");
+            fs.writeFileSync(change, (fs.readFileSync(change, "utf-8").replace(/options: ?\[.*]/gm, `options: [${data.join(',')}]`)));
 
-            const repository = path.join(__dirname, ".github", "ISSUE_TEMPLATE", "repository.yml");
-            fs.writeFileSync(repository, (fs.readFileSync(repository, "utf-8").replace(/options: ?\[.*]/gm, `options: [${data.join(',')}]`));
+            const repository = path.join(github.workspace, ".github", "ISSUE_TEMPLATE", "repository.yml");
+            fs.writeFileSync(repository, (fs.readFileSync(repository, "utf-8").replace(/options: ?\[.*]/gm, `options: [${data.join(',')}]`)));
 
       - name: 📥 Commit Changes
         env:
