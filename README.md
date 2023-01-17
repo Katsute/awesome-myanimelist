@@ -3,11 +3,11 @@
     <a href="https://github.com/Katsute/awesome-myanimelist#readme">
         <img src="https://raw.githubusercontent.com/KatsuteDev/Background/main/logo.png" width="100" height="100">
     </a>
-    <h3>awesome-myanimelist</h3>
+    <h3>Awesome MyAnimeList</h3>
     <h5>A curated list of all things MyAnimeList</h5>
-    <a href="https://github.com/Katsute/awesome-myanimelist/issues/new?template=category.yml">Submit a new category</a>
-    •
-    <a href="https://github.com/Katsute/awesome-myanimelist/issues/new?template=repository.yml">Submit a new repository</a>
+    <table><tr><td>
+        <a href="https://github.com/Katsute/awesome-myanimelist/issues/new?template=1-repository.yml">Submit a New Repository</a>
+    </td></tr></table>
 </div>
 
 ## Contents

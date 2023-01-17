@@ -34,7 +34,11 @@ jobs:
             const path = require("path");
             const __dirname = path.resolve();
 
-        # todo: modify readme
+            const README = path.join(__dirname, "README.json");
+            const categories = JSON.parse(fs.readFileSync(path.join(__dirname, "categories.json"), "utf-8"));
+            const repositories = JSON.parse(fs.readFileSync(path.join(__dirname, "repositories.json"), "utf-8"));
+
+            fs.writeFileSync(README, fs.readFileSync(README, "utf-8").replace(/(?<=<!-- CONTENT -->\n).*(?=<!-- \/CONTENT -->)/gms, JSON.stringify(repositories, null, 4)));
 
       - name: 📥 Commit Changes
         run: |

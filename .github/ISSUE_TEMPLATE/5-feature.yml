@@ -7,8 +7,8 @@ body:
       value: |
         This form is only for requesting new features, if you want to add a new category or repository please use one of the below forms:
 
-        * [Category Request](https://github.com/Katsute/awesome-myanimelist/issues/new?template=category.yml)
-        * [Repository Request](https://github.com/Katsute/awesome-myanimelist/issues/new?template=repository.yml)
+        * [Category Request](https://github.com/Katsute/awesome-myanimelist/issues/new?template=3-category.yml)
+        * [Repository Request](https://github.com/Katsute/awesome-myanimelist/issues/new?template=1-repository.yml)
 
   - type: textarea
     attributes:

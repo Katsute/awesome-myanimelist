@@ -42,4 +42,4 @@ body:
   - type: markdown
     attributes:
       value: |
-        Do not modify the above section after you submit your request, our workflows depend on a strict request format.
+        Do not modify this form after you submit your request, our workflows depend on a strict request format.

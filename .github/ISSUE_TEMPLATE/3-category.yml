@@ -10,11 +10,6 @@ body:
     validations:
       required: true
 
-  - type: markdown
-    attributes:
-      value: |
-        Do not modify the above section after you submit your request, our workflows depend on a strict request format.
-
   - type: textarea
     attributes:
       label: Reason
@@ -28,3 +23,8 @@ body:
       description: Include a list of repositories that might appear in the proposed category (using ones already in this list is also acceptable).
     validations:
       required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        Do not modify this form after you submit your request, our workflows depend on a strict request format.
