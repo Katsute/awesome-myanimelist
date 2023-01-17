@@ -32,7 +32,7 @@ jobs:
         env:
           REPOSITORY: ${{ github.event.inputs.repository }}
         run: |
-          git checkout -B repository/$REPOSITORY
+          git checkout -B repository/$REPOSITORY -t origin
 
       - name: ➕ Write Changes
         uses: actions/github-script@v6
@@ -47,7 +47,7 @@ jobs:
             const __dirname = path.resolve();
 
             const file = path.join(__dirname, "items.json");
-            const data = JSON.parse(fs.readFileSync(file, "utf-8"));
+            let data = JSON.parse(fs.readFileSync(file, "utf-8"));
 
             const repository = process.env.REPOSITORY;
             const category = process.env.CATEGORY;
@@ -71,7 +71,7 @@ jobs:
           git config --global user.email "mashiro-san@users.noreply.github.com"
           git add -u
           git commit -m "Add new repository '$REPOSITORY'"
-          git push
+          git push origin HEAD
 
       - name: 🟣 Create PR
         env:

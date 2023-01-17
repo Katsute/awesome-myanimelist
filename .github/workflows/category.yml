@@ -28,7 +28,7 @@ jobs:
         env:
           CATEGORY: ${{ github.event.inputs.category }}
         run: |
-          git checkout -B category/$CATEGORY
+          git checkout -B category/$CATEGORY -t origin
 
       - name: ➕ Write Changes
         uses: actions/github-script@v6
@@ -66,7 +66,7 @@ jobs:
           git config --global user.email "mashiro-san@users.noreply.github.com"
           git add -u
           git commit -m "Add new category '$CATEGORY'"
-          git push
+          git push origin HEAD
 
       - name: 🟣 Create PR
         env:
