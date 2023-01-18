@@ -24,11 +24,20 @@ jobs:
           architecture: x64
           node-version: 19
 
+      - name: ✔️ Verify Branch Name
+        uses: actions/github-script@v6
+        env:
+          BRANCH: ${{ github.event.inputs.category }}
+        with:
+          github-token: ${{ secrets.TOKEN }}
+          script: |
+            core.exportVariable("BRANCH", "category/" + process.env.BRANCH.replace(/[^\w]/gm, '-'));
+
       - name: ➕ Checkout New Branch
         env:
-          CATEGORY: ${{ github.event.inputs.category }}
+          BRANCH: ${{ env.BRANCH }}
         run: |
-          git checkout -B category/$CATEGORY
+          git checkout -B "$BRANCH"
 
       - name: ➕ Write Changes
         uses: actions/github-script@v6
@@ -77,5 +86,5 @@ jobs:
       - name: 🚀 Dispatch README
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
-          CATEGORY: ${{ github.event.inputs.category }}
-        run: gh workflow run update.yml -r category/$CATEGORY
+          BRANCH: ${{ env.BRANCH }}
+        run: gh workflow run update.yml -r "$BRANCH"

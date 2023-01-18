@@ -28,11 +28,20 @@ jobs:
           architecture: x64
           node-version: 19
 
+      - name: ✔️ Verify Branch Name
+        uses: actions/github-script@v6
+        env:
+          BRANCH: ${{ github.event.inputs.repository }}
+        with:
+          github-token: ${{ secrets.TOKEN }}
+          script: |
+            core.exportVariable("BRANCH", "repository/" + process.env.BRANCH.replace(/[^\w]/gm, '-'));
+
       - name: ➕ Checkout New Branch
         env:
-          REPOSITORY: ${{ github.event.inputs.repository }}
+          BRANCH: ${{ env.BRANCH }}
         run: |
-          git checkout -B change/$REPOSITORY
+          git checkout -B "$BRANCH"
 
       - name: ➕ Write Changes
         uses: actions/github-script@v6
@@ -78,10 +87,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
           REPOSITORY: ${{ github.event.inputs.repository }}
-        run: gh pr create -l "change request" -t "[Change] $REPOSITORY" -b "Automated change request for ['$REPOSITORY'](https://github.com/$REPOSITORY)"
+        run: gh pr create -l "change request" -t "[Change] $REPOSITORY" -b "Automated change request for [$REPOSITORY](https://github.com/$REPOSITORY)"
 
       - name: 🚀 Dispatch README
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
-          REPOSITORY: ${{ github.event.inputs.repository }}
-        run: gh workflow run update.yml -r change/$REPOSITORY
+          BRANCH: ${{ env.BRANCH }}
+        run: gh workflow run update.yml -r "$BRANCH"
