@@ -35,7 +35,7 @@ body:
       label: Category
       description: Which categories the repository should appear in.
       multiple: true
-      options: [API, Extension, Profile]
+      options: [API,Browser Extension,Extension,Profile]
     validations:
       required: false
 
