@@ -31,7 +31,7 @@ jobs:
         with:
           github-token: ${{ secrets.TOKEN }}
           script: |
-            core.exportVariable("BRANCH", "category/" + process.env.BRANCH.replace(/[^\w]/gm, '-'));
+            core.exportVariable("BRANCH", "category/" + process.env.BRANCH.replace(/[^\w]/gm, '-').toLowerCase());
 
       - name: ➕ Checkout New Branch
         env:
@@ -62,17 +62,17 @@ jobs:
             fs.writeFileSync(file, JSON.stringify(data, null, 4));
 
             const repository = path.join(__dirname, ".github", "ISSUE_TEMPLATE", "1-repository.yml");
-            fs.writeFileSync(repository, (fs.readFileSync(repository, "utf-8").replace(/options: ?\[.*]/gm, `options: [${data.join(',')}]`)));
+            fs.writeFileSync(repository, (fs.readFileSync(repository, "utf-8").replace(/options: ?\[.*]/gm, `options: [${data.join(", ")}]`)));
 
             const change = path.join(__dirname, ".github", "ISSUE_TEMPLATE", "2-change.yml");
-            fs.writeFileSync(change, (fs.readFileSync(change, "utf-8").replace(/options: ?\[.*]/gm, `options: [${data.join(',')}]`)));
+            fs.writeFileSync(change, (fs.readFileSync(change, "utf-8").replace(/options: ?\[.*]/gm, `options: [${data.join(", ")}]`)));
 
       - name: 📥 Commit Changes
         env:
           CATEGORY: ${{ github.event.inputs.category }}
         run: |
-          git config --global user.name "mashiro-san"
-          git config --global user.email "mashiro-san@users.noreply.github.com"
+          git config --global user.name "Mashiro"
+          git config --global user.email "107276926+mashiro-san@users.noreply.github.com"
           git add -u
           git commit -m "Add new category '$CATEGORY'"
           git push origin HEAD

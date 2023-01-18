@@ -35,7 +35,7 @@ jobs:
         with:
           github-token: ${{ secrets.TOKEN }}
           script: |
-            core.exportVariable("BRANCH", "repository/" + process.env.BRANCH.replace(/[^\w]/gm, '-'));
+            core.exportVariable("BRANCH", "repository/" + process.env.BRANCH.replace(/[^\w]/gm, '-').toLowerCase());
 
       - name: ➕ Checkout New Branch
         env:
@@ -77,8 +77,8 @@ jobs:
         env:
           REPOSITORY: ${{ github.event.inputs.repository }}
         run: |
-          git config --global user.name "mashiro-san"
-          git config --global user.email "mashiro-san@users.noreply.github.com"
+          git config --global user.name "Mashiro"
+          git config --global user.email "107276926+mashiro-san@users.noreply.github.com"
           git add -u
           git commit -m "Modify '$repository'"
           git push origin HEAD
