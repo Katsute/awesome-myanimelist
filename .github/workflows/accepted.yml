@@ -47,7 +47,7 @@ jobs:
           github-token: ${{ secrets.TOKEN }}
           script: |
             core.exportVariable("REPOSITORY", process.env.BODY.split(/(?:\r?\n){2,}/gm)[1]);
-            core.exportVariable("CATEGORY", process.env.BODY.split(/(?:\r?\n){2,}/gm)[3]).replace(/ /gm, "").join(","));
+            core.exportVariable("CATEGORY", process.env.BODY.split(/(?:\r?\n){2,}/gm)[3].replace(/ /gm, "").join(","));
 
       - name: 🚀 Dispatch Workflow
         env:
@@ -74,7 +74,7 @@ jobs:
           github-token: ${{ secrets.TOKEN }}
           script: |
             core.exportVariable("REPOSITORY", process.env.BODY.split(/(?:\r?\n){2,}/gm)[1]);
-            core.exportVariable("CATEGORY", process.env.BODY.split(/(?:\r?\n){2,}/gm)[3]).replace(/ /gm, "").join(","));
+            core.exportVariable("CATEGORY", process.env.BODY.split(/(?:\r?\n){2,}/gm)[3].replace(/ /gm, "").join(","));
 
       - name: 🚀 Dispatch Workflow
         env:
