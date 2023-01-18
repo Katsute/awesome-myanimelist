@@ -38,12 +38,12 @@ jobs:
             const categories = JSON.parse(fs.readFileSync(path.join(__dirname, "categories.json"), "utf-8"));
             const repositories = JSON.parse(fs.readFileSync(path.join(__dirname, "repositories.json"), "utf-8"));
 
-            fs.writeFileSync(README, fs.readFileSync(README, "utf-8").replace(/(?<=<!-- CONTENT -->\n).*(?=<!-- \/CONTENT -->)/gms, JSON.stringify(repositories, null, 4)));
+            fs.writeFileSync(README, fs.readFileSync(README, "utf-8").replace(/(?<=<!-- CONTENT -->\n).*(?=\n?<!-- \/CONTENT -->)/gms, "```json\n" + JSON.stringify(repositories, null, 4) + "\n```"));
 
       - name: 📥 Commit Changes
         run: |
           git config --global user.name "Mashiro"
-          git config --global user.email "mashiro-san@users.noreply.github.com"
+          git config --global user.email "107276926+mashiro-san@users.noreply.github.com"
           git add -u
           git commit -m "Update README"
           git push

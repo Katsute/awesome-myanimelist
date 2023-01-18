@@ -35,7 +35,7 @@ jobs:
         with:
           github-token: ${{ secrets.TOKEN }}
           script: |
-            core.exportVariable("BRANCH", "repository/" + process.env.BRANCH.replace(/[^\w]/gm, '-'));
+            core.exportVariable("BRANCH", "repository/" + process.env.BRANCH.replace(/[^\w]/gm, '-').toLowerCase());
 
       - name: ➕ Checkout New Branch
         env:
