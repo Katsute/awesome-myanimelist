@@ -15,7 +15,15 @@
 // todo
 
 <!-- CONTENT -->
-<!-- /CONTENT -->
+[
+    {
+        "repository": "KatsuteDev/Mal4J",
+        "category": [
+            "API",
+            "Profile"
+        ]
+    }
+]<!-- /CONTENT -->
 
 ### ⚠️️ Disclaimer
 
