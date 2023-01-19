@@ -64,7 +64,7 @@ jobs:
                 }
                 buf += '\n';
                 buf += '\n';
-                buf += "<p align="right">(<a href="#top">back to top</a>)</p>";
+                buf += `<p align="right">(<a href="#top">back to top</a>)</p>`;
             }
 
             fs.writeFileSync(README, fs.readFileSync(README, "utf-8").replace(/(?<=<!-- CONTENT -->\n).*(?=\n?<!-- \/CONTENT -->)/gms, '\n' + buf.trim() + '\n'));
