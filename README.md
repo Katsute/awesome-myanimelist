@@ -15,22 +15,24 @@
 // todo
 
 <!-- CONTENT -->
-## ${category}
 
-## ${category}
+## Android
 
-## ${category}
+## Browser Extension
 
-## ${category}
+## Client
 
-## ${category}
+## Database
 
-## ${category}
+## Profile
 
-## ${category}
+## List Design
 
- * [undefined](undefined) undefined
-## ${category}<!-- /CONTENT -->
+## Programming
+
+ * [KatsuteDev/Mal4J](https://github.com/KatsuteDev/Mal4J) Java wrapper for the official MyAnimeList API
+## Sync
+<!-- /CONTENT -->
 
 ## ⚠️️ Disclaimer
 
