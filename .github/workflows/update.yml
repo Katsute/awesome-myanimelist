@@ -38,7 +38,24 @@ jobs:
             const categories = JSON.parse(fs.readFileSync(path.join(__dirname, "categories.json"), "utf-8"));
             const repositories = JSON.parse(fs.readFileSync(path.join(__dirname, "repositories.json"), "utf-8"));
 
-            fs.writeFileSync(README, fs.readFileSync(README, "utf-8").replace(/(?<=<!-- CONTENT -->\n).*(?=\n?<!-- \/CONTENT -->)/gms, "```json\n" + JSON.stringify(repositories, null, 4) + "\n```"));
+            let buf = "";
+
+            for(const category of categories){
+                buf += '\n';
+                buf += "## ${category}";
+                buf += '\n';
+                for(const r of repositories.filter(r => r.category.includes(category)).sort((a, b) => a.repository.toLowerCase() > b.repository.toLowerCase() ? 1 : -1)){
+                    const repo = await github.rest.repos.get({
+                        owner: r.repository.split('/')[0],
+                        repo: r.repository.split('/')[1]
+                    });
+
+                    buf += '\n';
+                    buf += ` * [${repo.full_name}](${repo.html_url}) ${repo.description}`;
+                }
+            }
+
+            fs.writeFileSync(README, fs.readFileSync(README, "utf-8").replace(/(?<=<!-- CONTENT -->\n).*(?=\n?<!-- \/CONTENT -->)/gms, buf.trim()));
 
       - name: 📥 Commit Changes
         run: |

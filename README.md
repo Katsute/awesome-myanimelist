@@ -17,7 +17,7 @@
 <!-- CONTENT -->
 <!-- /CONTENT -->
 
-### ⚠️️ Disclaimer
+## ⚠️️ Disclaimer
 
  - [@Katsute](https://github.com/Katsute) is not affiliated with MyAnimeList.
 
