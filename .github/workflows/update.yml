@@ -45,7 +45,7 @@ jobs:
                 buf += ` * [${category}](#${category.toLowerCase().replace(/ /gm, '-')})`;
             }
 
-            fs.writeFileSync(README, fs.readFileSync(README, "utf-8").replace(/(?<=<!-- TOC -->\n).*(?=\n?<!-- \/TOC -->)/gms, '\n' + buf.trim() + '\n'));
+            fs.writeFileSync(README, fs.readFileSync(README, "utf-8").replace(/(?<=<!-- TOC -->\n).*(?=\n?<!-- \/TOC -->)/gms, buf + '\n'));
 
             buf = "";
 
@@ -65,9 +65,10 @@ jobs:
                 buf += '\n';
                 buf += '\n';
                 buf += `<p align="right">(<a href="#top">back to top</a>)</p>`;
+                buf += '\n';
             }
 
-            fs.writeFileSync(README, fs.readFileSync(README, "utf-8").replace(/(?<=<!-- CONTENT -->\n).*(?=\n?<!-- \/CONTENT -->)/gms, '\n' + buf.trim() + '\n'));
+            fs.writeFileSync(README, fs.readFileSync(README, "utf-8").replace(/(?<=<!-- CONTENT -->\n).*(?=\n?<!-- \/CONTENT -->)/gms, buf + '\n'));
 
       - name: 📥 Commit Changes
         run: |
