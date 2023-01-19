@@ -17,9 +17,66 @@
 ## Contents
 
 <!-- TOC -->
+
+ * [Android](#android)
+ * [Browser Extension](#browser-extension)
+ * [Client](#client)
+ * [Database](#database)
+ * [Discord Bot](#discord-bot)
+ * [Profile](#profile)
+ * [List Design](#list-design)
+ * [Programming](#programming)
+ * [Sync](#sync)
 <!-- /TOC -->
 
 <!-- CONTENT -->
+
+## Android
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Browser Extension
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Client
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Database
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Discord Bot
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Profile
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## List Design
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Programming
+
+ * [KatsuteDev/Mal4J](https://github.com/KatsuteDev/Mal4J) - Java wrapper for the official MyAnimeList API
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Sync
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 <!-- /CONTENT -->
 
 <hr>
