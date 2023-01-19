@@ -42,20 +42,20 @@ jobs:
 
             for(const category of categories){
                 buf += '\n';
-                buf += "## ${category}";
+                buf += `## ${category}`;
                 buf += '\n';
                 for(const r of repositories.filter(r => r.category.includes(category)).sort((a, b) => a.repository.toLowerCase() > b.repository.toLowerCase() ? 1 : -1)){
-                    const repo = await github.rest.repos.get({
+                    const repo = (await github.rest.repos.get({
                         owner: r.repository.split('/')[0],
                         repo: r.repository.split('/')[1]
-                    });
+                    })).data;
 
                     buf += '\n';
                     buf += ` * [${repo.full_name}](${repo.html_url}) ${repo.description}`;
                 }
             }
 
-            fs.writeFileSync(README, fs.readFileSync(README, "utf-8").replace(/(?<=<!-- CONTENT -->\n).*(?=\n?<!-- \/CONTENT -->)/gms, buf.trim()));
+            fs.writeFileSync(README, fs.readFileSync(README, "utf-8").replace(/(?<=<!-- CONTENT -->\n).*(?=\n?<!-- \/CONTENT -->)/gms, '\n' + buf.trim() + '\n'));
 
       - name: 📥 Commit Changes
         run: |

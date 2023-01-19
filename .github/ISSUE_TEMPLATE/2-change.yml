@@ -1,7 +1,7 @@
 # Automated form! Update corresponding workflow.
 name: ➕ Change Request
 description: Change or remove a listed repository.
-labels: [repository request]
+labels: [change request]
 body:
   - type: markdown
     attributes:
