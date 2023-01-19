@@ -45,6 +45,8 @@ jobs:
                 buf += ` * [${category}](#${category.toLowerCase().replace(/ /gm, '-')})`;
             }
 
+            buf += '\n';
+
             fs.writeFileSync(README, fs.readFileSync(README, "utf-8").replace(/(?<=<!-- TOC -->\n).*(?=\n?<!-- \/TOC -->)/gms, buf + '\n'));
 
             buf = "";
