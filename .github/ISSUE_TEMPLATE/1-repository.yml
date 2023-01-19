@@ -25,7 +25,7 @@ body:
       label: Category
       description: Which categories the repository should appear in.
       multiple: true
-      options: ["Android", "Browser Extension", "Client", "Database", "Discord Bot", "Profile", "List Design", "Programming", "Sync"]
+      options: ["Android", "Browser Extension", "Client", "Database", "Discord Bot", "Profile", "List Design", "List Tracker", "Programming", "Userscript"]
     validations:
       required: true
 

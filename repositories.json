@@ -1,8 +1,80 @@
 [
     {
+        "repository": "axiel7/MoeList",
+        "category": [
+            "Android",
+            "List Tracker"
+        ]
+    },
+    {
+        "repository": "Chris-Kode/myanimelist-api-v2",
+        "category": [
+            "Programming"
+        ]
+    },
+    {
+        "repository": "Drutol/MALClient",
+        "category": [
+            "Android",
+            "Client",
+            "List Tracker"
+        ]
+    },
+    {
+        "repository": "erengy/taiga",
+        "category": [
+            "Client",
+            "List Tracker"
+        ]
+    },
+    {
+        "repository": "jikan-me/jikan",
+        "category": [
+            "Programming"
+        ]
+    },
+    {
         "repository": "KatsuteDev/Mal4J",
         "category": [
             "Programming"
+        ]
+    },
+    {
+        "repository": "Kylart/MalScraper",
+        "category": [
+            "Programming"
+        ]
+    },
+    {
+        "repository": "MAL-Dubs/MAL-Dubs",
+        "category": [
+            "Userscript"
+        ]
+    },
+    {
+        "repository": "MALSync/MALSync",
+        "category": [
+            "Browser Extension",
+            "List Tracker"
+        ]
+    },
+    {
+        "repository": "nstratos/go-myanimelist",
+        "category": [
+            "Programming"
+        ]
+    },
+    {
+        "repository": "Sharkaboi/MediaHub",
+        "category": [
+            "Android",
+            "List Tracker"
+        ]
+    },
+    {
+        "repository": "ValerioLyndon/MAL-Public-List-Designs",
+        "category": [
+            "List Design"
         ]
     }
 ]
