@@ -55,7 +55,7 @@ jobs:
 
             const category = process.env.CATEGORY;
 
-            data = data.filter(item => item.name !== category);
+            data = data.filter(item => item !== category);
             data.push(category);
             data.sort();
 

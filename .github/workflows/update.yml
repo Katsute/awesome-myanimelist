@@ -42,6 +42,15 @@ jobs:
 
             for(const category of categories){
                 buf += '\n';
+                buf += ` * [${category}](#${category.toLowerCase().replace(/ /gm, '-')})`;
+            }
+
+            fs.writeFileSync(README, fs.readFileSync(README, "utf-8").replace(/(?<=<!-- TOC -->\n).*(?=\n?<!-- \/TOC -->)/gms, '\n' + buf.trim() + '\n'));
+
+            buf = "";
+
+            for(const category of categories){
+                buf += '\n';
                 buf += `## ${category}`;
                 buf += '\n';
                 for(const r of repositories.filter(r => r.category.includes(category)).sort((a, b) => a.repository.toLowerCase() > b.repository.toLowerCase() ? 1 : -1)){
@@ -51,8 +60,11 @@ jobs:
                     })).data;
 
                     buf += '\n';
-                    buf += ` * [${repo.full_name}](${repo.html_url}) ${repo.description}`;
+                    buf += ` * [${repo.full_name}](${repo.html_url}) - ${repo.description}`;
                 }
+                buf += '\n';
+                buf += '\n';
+                buf += "<p align="right">(<a href="#top">back to top</a>)</p>";
             }
 
             fs.writeFileSync(README, fs.readFileSync(README, "utf-8").replace(/(?<=<!-- CONTENT -->\n).*(?=\n?<!-- \/CONTENT -->)/gms, '\n' + buf.trim() + '\n'));
