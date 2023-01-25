@@ -13,6 +13,19 @@
         ]
     },
     {
+        "repository": "darenliang/mal-api",
+        "category": [
+            "Programming"
+        ]
+    },
+    {
+        "repository": "destructo570/Sushi-Unofficial-MAL-Client",
+        "category": [
+            "Android",
+            "List Tracker"
+        ]
+    },
+    {
         "repository": "Drutol/MALClient",
         "category": [
             "Android",
@@ -60,6 +73,12 @@
     },
     {
         "repository": "nstratos/go-myanimelist",
+        "category": [
+            "Programming"
+        ]
+    },
+    {
+        "repository": "platers/MAL-Map",
         "category": [
             "Programming"
         ]
