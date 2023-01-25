@@ -36,6 +36,7 @@
 ## Android
 
  * [axiel7/MoeList](https://github.com/axiel7/MoeList) - Another unofficial Android MAL client
+ * [destructo570/Sushi-Unofficial-MAL-Client](https://github.com/destructo570/Sushi-Unofficial-MAL-Client) - Sushi is a modern and minimal android client for MyAnimeList
  * [Drutol/MALClient](https://github.com/Drutol/MALClient) - Not so small client app for Myanimelist.net - Windows 10 UWP & Android
  * [Sharkaboi/MediaHub](https://github.com/Sharkaboi/MediaHub) - A simple, easy to use MyAnimeList android client alternative.
 
@@ -78,6 +79,7 @@
 ## List Tracker
 
  * [axiel7/MoeList](https://github.com/axiel7/MoeList) - Another unofficial Android MAL client
+ * [destructo570/Sushi-Unofficial-MAL-Client](https://github.com/destructo570/Sushi-Unofficial-MAL-Client) - Sushi is a modern and minimal android client for MyAnimeList
  * [Drutol/MALClient](https://github.com/Drutol/MALClient) - Not so small client app for Myanimelist.net - Windows 10 UWP & Android
  * [erengy/taiga](https://github.com/erengy/taiga) - A lightweight anime tracker for Windows
  * [MALSync/MALSync](https://github.com/MALSync/MALSync) - Integrates MyAnimeList/AniList/Kitsu/Simkl into various sites, with auto episode tracking.
@@ -88,10 +90,12 @@
 ## Programming
 
  * [Chris-Kode/myanimelist-api-v2](https://github.com/Chris-Kode/myanimelist-api-v2) - An awesome wrapper on Nodejs for the new MyAnimeList's API v2!
+ * [darenliang/mal-api](https://github.com/darenliang/mal-api) - A local MyAnimeList API
  * [jikan-me/jikan](https://github.com/jikan-me/jikan) - Unofficial MyAnimeList PHP+REST API which provides functions other than the official API
  * [KatsuteDev/Mal4J](https://github.com/KatsuteDev/Mal4J) - Java wrapper for the official MyAnimeList API
  * [Kylart/MalScraper](https://github.com/Kylart/MalScraper) - Scrape everything you can from MyAnimeList.net
  * [nstratos/go-myanimelist](https://github.com/nstratos/go-myanimelist) - Go library for accessing the MyAnimeList API: https://myanimelist.net/apiconfig/references/api/v2
+ * [platers/MAL-Map](https://github.com/platers/MAL-Map) - Cluster and visualize relationships between anime on MyAnimeList
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
