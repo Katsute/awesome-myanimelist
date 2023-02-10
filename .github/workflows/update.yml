@@ -70,7 +70,7 @@ jobs:
                 buf += '\n';
             }
 
-            fs.writeFileSync(README, fs.readFileSync(README, "utf-8").replace(/(?<=<!-- CONTENT -->\n).*(?=\n?<!-- \/CONTENT -->)/gms, buf + '\n'));
+            fs.writeFileSync(README, fs.readFileSync(README, "utf-8").replace(/(?<=<!-- CONTENT -->\n).*(?=\n?<!-- \/CONTENT -->)/gms, buf + '\n').trim());
 
       - name: 📥 Commit Changes
         run: |

@@ -8,7 +8,7 @@ body:
       value: |
         Repositories can only be submitted to this list if:
 
-        * They are related directly to MyAnimeList.
+        * Related directly to MyAnimeList.
         * At least 10 stars.
         * Updated within the last year.
 
