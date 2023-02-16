@@ -73,6 +73,7 @@
 ## List Design
 
  * [ValerioLyndon/MAL-Public-List-Designs](https://github.com/ValerioLyndon/MAL-Public-List-Designs) - MyAnimeList designs available for anyone to use.
+ * [ValerioLyndon/Theme-Customiser](https://github.com/ValerioLyndon/Theme-Customiser) - Easy customisation of list designs for MyAnimeList.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
