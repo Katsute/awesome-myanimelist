@@ -41,8 +41,8 @@ jobs:
             let buf = "";
 
             for(const category of categories){
-                buf += '\n';
-                buf += ` * [${category}](#${category.toLowerCase().replace(/ /gm, '-')})`;
+              buf += '\n';
+              buf += ` * [${category}](#${category.toLowerCase().replace(/ /gm, '-')})`;
             }
 
             buf += '\n';
@@ -52,22 +52,29 @@ jobs:
             buf = "";
 
             for(const category of categories){
+              const repos = repositories.filter(r => r.category.includes(category)).sort((a, b) => a.repository.toLowerCase() > b.repository.toLowerCase() ? 1 : -1);
+              if(repos.length > 0){
                 buf += '\n';
                 buf += `## ${category}`;
                 buf += '\n';
-                for(const r of repositories.filter(r => r.category.includes(category)).sort((a, b) => a.repository.toLowerCase() > b.repository.toLowerCase() ? 1 : -1)){
+                for(const r of repos){
                     const repo = (await github.rest.repos.get({
                         owner: r.repository.split('/')[0],
                         repo: r.repository.split('/')[1]
                     })).data;
 
                     buf += '\n';
-                    buf += ` * [${repo.full_name}](${repo.html_url}) - ${repo.description}`;
+                    buf += `### [${repo.full_name}](${repo.html_url})\n`;
+                    buf += '\n';
+                    buf += `<sup>${repo.language} • ⭐ ${repo.stargazers_count} • Updated ${new Date(repo.updated_at).toLocaleDateString("en-US", {year:"numeric", month:"long", day:"numeric"})}\n`;
+                    buf += '\n';
+                    buf += `${repo.description}\n`;
                 }
                 buf += '\n';
                 buf += '\n';
                 buf += `<p align="right">(<a href="#top">back to top</a>)</p>`;
                 buf += '\n';
+              }
             }
 
             fs.writeFileSync(README, fs.readFileSync(README, "utf-8").replace(/(?<=<!-- CONTENT -->\n).*(?=\n?<!-- \/CONTENT -->)/gms, buf + '\n').trim());
