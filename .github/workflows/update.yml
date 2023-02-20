@@ -64,7 +64,7 @@ jobs:
                     })).data;
 
                     buf += '\n';
-                    buf += `### [${repo.full_name}](${repo.html_url})\n`;
+                    buf += `<h3><img src="${repo.owner.avatar_url}" width="20" height="20"><a href="${repo.html_url}">&nbsp;${repo.full_name}</a></h3>\n`;
                     buf += '\n';
                     buf += `<sup>${repo.language} • ⭐ ${repo.stargazers_count} • Updated ${new Date(repo.updated_at).toLocaleDateString("en-US", {year:"numeric", month:"long", day:"numeric"})}\n`;
                     buf += '\n';
