@@ -59,7 +59,6 @@ Not so small client app for Myanimelist.net - Windows 10 UWP & Android
 
 A simple, easy to use MyAnimeList android client alternative.
 
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Browser Extension
@@ -69,7 +68,6 @@ A simple, easy to use MyAnimeList android client alternative.
 <sup>TypeScript • ⭐ 1427 • Updated February 18, 2023
 
 Integrates MyAnimeList/AniList/Kitsu/Simkl into various sites, with auto episode tracking.
-
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -87,7 +85,6 @@ Not so small client app for Myanimelist.net - Windows 10 UWP & Android
 
 A lightweight anime tracker for Windows
 
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## List Design
@@ -103,7 +100,6 @@ MyAnimeList designs available for anyone to use.
 <sup>CSS • ⭐ 13 • Updated February 17, 2023
 
 Easy customisation of list designs for MyAnimeList.
-
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -144,7 +140,6 @@ Integrates MyAnimeList/AniList/Kitsu/Simkl into various sites, with auto episode
 <sup>Kotlin • ⭐ 59 • Updated February 15, 2023
 
 A simple, easy to use MyAnimeList android client alternative.
-
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -192,7 +187,6 @@ Go library for accessing the MyAnimeList API: https://myanimelist.net/apiconfig/
 
 Cluster and visualize relationships between anime on MyAnimeList
 
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Userscript
@@ -202,7 +196,6 @@ Cluster and visualize relationships between anime on MyAnimeList
 <sup>JavaScript • ⭐ 23 • Updated February 12, 2023
 
 MAL Dubs is a userscript which labels over 4500 English dubbed titles on MyAnimeList.net and adds a "Dub Only" filter to search, seasonal and top anime pages.
-
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
