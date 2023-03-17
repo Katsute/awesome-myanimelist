@@ -2,6 +2,7 @@
 name: ➕ Repository Request
 description: Add your repository to this list.
 labels: [repository request]
+assignees: [Katsute]
 body:
   - type: markdown
     attributes:

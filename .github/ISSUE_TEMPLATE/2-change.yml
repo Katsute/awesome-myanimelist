@@ -2,6 +2,7 @@
 name: ➕ Change Request
 description: Change or remove a listed repository.
 labels: [change request]
+assignees: [Katsute]
 body:
   - type: markdown
     attributes:

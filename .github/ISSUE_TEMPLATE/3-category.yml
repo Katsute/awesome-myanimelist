@@ -2,6 +2,7 @@
 name: ➕ Category Request
 description: Add a new category type to this list.
 labels: [category request]
+assignees: [Katsute]
 body:
   - type: input
     attributes:
