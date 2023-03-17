@@ -87,7 +87,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
           REPOSITORY: ${{ github.event.inputs.repository }}
-        run: gh pr create -l "change request" -t "[Change] $REPOSITORY" -b "Automated change request for [$REPOSITORY](https://github.com/$REPOSITORY)"
+        run: gh pr create -l "change request" -t "[Change] $REPOSITORY" -b "Automated change request for [$REPOSITORY](https://github.com/$REPOSITORY)" -a "Katsute"
 
       - name: 🚀 Dispatch README
         env:

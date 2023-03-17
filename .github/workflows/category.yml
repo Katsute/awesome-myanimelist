@@ -81,7 +81,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
           CATEGORY: ${{ github.event.inputs.category }}
-        run: gh pr create -l "category request" -t "[New Category] $CATEGORY" -b "Automated category request for '$CATEGORY'"
+        run: gh pr create -l "category request" -t "[New Category] $CATEGORY" -b "Automated category request for '$CATEGORY'" -a "Katsute"
 
       - name: 🚀 Dispatch README
         env:
