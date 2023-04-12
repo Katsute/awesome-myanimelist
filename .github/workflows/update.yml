@@ -2,12 +2,9 @@ name: 🔄 README Update
 
 on:
   workflow_dispatch:
-  # pull_request:
-  #   branches: [main]
-  #   types: [closed]
-  # schedule:
-  #   - cron: 0 12 * 1-2,11-12 *
-  #   - cron: 0 11 * 3-10 *
+  schedule:
+    - cron: 0 12 * 1-2,11-12 0
+    - cron: 0 11 * 3-10 0
 
 jobs:
   item:
