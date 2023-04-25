@@ -63,7 +63,7 @@ jobs:
                     buf += '\n';
                     buf += `<h3><a href="${repo.owner.html_url}"><img src="${repo.owner.avatar_url}" width="25" height="25"></a>&nbsp;<a href="${repo.html_url}">${repo.full_name}</a></h3>\n`;
                     buf += '\n';
-                    buf += `<sup>${repo.language} • ⭐ ${repo.stargazers_count} • Updated ${new Date(repo.updated_at).toLocaleDateString("en-US", {year:"numeric", month:"long", day:"numeric"})}\n`;
+                    buf += `<sup>${repo.language} • ⭐ ${repo.stargazers_count} • Updated ${new Date(repo.pushed_at).toLocaleDateString("en-US", {year:"numeric", month:"long", day:"numeric"})}\n`;
                     buf += '\n';
                     buf += `${repo.description}\n`;
                 }
