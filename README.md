@@ -60,17 +60,17 @@ Not so small client app for Myanimelist.net - Windows 10 UWP & Android
 
 A simple, easy to use MyAnimeList android client alternative.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<div align="right"><a href="#top"><code>▲</code></a></div>
 
 ## Browser Extension
 
 <h3><a href="https://github.com/MALSync"><img src="https://avatars.githubusercontent.com/u/63724565?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/MALSync/MALSync">MALSync/MALSync</a></h3>
 
-<sup>TypeScript • ⭐ 1575 • Updated June 10, 2023
+<sup>TypeScript • ⭐ 1577 • Updated June 10, 2023
 
 Integrates MyAnimeList/AniList/Kitsu/Simkl into various sites, with auto episode tracking.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<div align="right"><a href="#top"><code>▲</code></a></div>
 
 ## Client
 
@@ -86,13 +86,13 @@ Not so small client app for Myanimelist.net - Windows 10 UWP & Android
 
 A lightweight anime tracker for Windows
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<div align="right"><a href="#top"><code>▲</code></a></div>
 
 ## List Design
 
 <h3><a href="https://github.com/ValerioLyndon"><img src="https://avatars.githubusercontent.com/u/29792052?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/ValerioLyndon/MAL-Public-List-Designs">ValerioLyndon/MAL-Public-List-Designs</a></h3>
 
-<sup>CSS • ⭐ 81 • Updated May 27, 2023
+<sup>CSS • ⭐ 82 • Updated May 27, 2023
 
 MyAnimeList designs available for anyone to use.
 
@@ -102,7 +102,7 @@ MyAnimeList designs available for anyone to use.
 
 Easy customisation of list designs for MyAnimeList.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<div align="right"><a href="#top"><code>▲</code></a></div>
 
 ## List Tracker
 
@@ -138,7 +138,7 @@ MyAnimeList web client with trakt.tv, AniList, Kitsu, SIMKL, Annict and LiveChar
 
 <h3><a href="https://github.com/MALSync"><img src="https://avatars.githubusercontent.com/u/63724565?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/MALSync/MALSync">MALSync/MALSync</a></h3>
 
-<sup>TypeScript • ⭐ 1575 • Updated June 10, 2023
+<sup>TypeScript • ⭐ 1577 • Updated June 10, 2023
 
 Integrates MyAnimeList/AniList/Kitsu/Simkl into various sites, with auto episode tracking.
 
@@ -148,7 +148,7 @@ Integrates MyAnimeList/AniList/Kitsu/Simkl into various sites, with auto episode
 
 A simple, easy to use MyAnimeList android client alternative.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<div align="right"><a href="#top"><code>▲</code></a></div>
 
 ## Programming
 
@@ -172,13 +172,13 @@ Unofficial MyAnimeList PHP+REST API which provides functions other than the offi
 
 <h3><a href="https://github.com/KatsuteDev"><img src="https://avatars.githubusercontent.com/u/87244777?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/KatsuteDev/Mal4J">KatsuteDev/Mal4J</a></h3>
 
-<sup>Java • ⭐ 27 • Updated June 1, 2023
+<sup>Java • ⭐ 27 • Updated June 12, 2023
 
 Java wrapper for the official MyAnimeList API
 
 <h3><a href="https://github.com/Kylart"><img src="https://avatars.githubusercontent.com/u/18316666?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/Kylart/MalScraper">Kylart/MalScraper</a></h3>
 
-<sup>JavaScript • ⭐ 151 • Updated June 9, 2023
+<sup>JavaScript • ⭐ 151 • Updated June 11, 2023
 
 Scrape everything you can from MyAnimeList.net
 
@@ -194,7 +194,7 @@ Go library for accessing the MyAnimeList API: https://myanimelist.net/apiconfig/
 
 Cluster and visualize relationships between anime on MyAnimeList
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<div align="right"><a href="#top"><code>▲</code></a></div>
 
 ## Userscript
 
@@ -204,7 +204,7 @@ Cluster and visualize relationships between anime on MyAnimeList
 
 MAL Dubs is a userscript which labels over 4500 English dubbed titles on MyAnimeList.net and adds a "Dub Only" filter to search, seasonal and top anime pages.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<div align="right"><a href="#top"><code>▲</code></a></div>
 
 ## Website
 
@@ -220,7 +220,7 @@ MyAnimeList web client with trakt.tv, AniList, Kitsu, SIMKL, Annict and LiveChar
 
 Convert your MyAnimeList anime list to force-directed graph and see your anime world.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<div align="right"><a href="#top"><code>▲</code></a></div>
 
 <!-- /CONTENT -->
 
