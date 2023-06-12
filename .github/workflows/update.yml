@@ -68,7 +68,7 @@ jobs:
                     buf += `${repo.description}\n`;
                 }
                 buf += '\n';
-                buf += `<p align="right">(<a href="#top">back to top</a>)</p>`;
+                buf += `<div align="right"><a href="#top"><code>▲</code></a></div>`;
                 buf += '\n';
               }
             }
