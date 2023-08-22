@@ -1,4 +1,4 @@
-name: 💬 Repository Reference
+name: Repository Reference
 
 on:
   issues:
@@ -6,16 +6,16 @@ on:
 
 jobs:
   lock-issue:
-    name: 💬 Repository Reference
+    name: Repository Reference
     runs-on: ubuntu-latest
     if: contains(github.event.issue.labels.*.name, 'repository request') || contains(github.event.issue.labels.*.name, 'change request')
     steps:
-      - name: 📤 Checkout Repository
+      - name: Checkout Repository
         uses: actions/checkout@v3
         with:
           token: ${{ secrets.TOKEN }}
 
-      - name: 📄 Parse Body
+      - name: Parse Body
         uses: actions/github-script@v6
         env:
           BODY: ${{ github.event.issue.body }}
@@ -24,7 +24,7 @@ jobs:
           script: |
             core.exportVariable("REPOSITORY", process.env.BODY.split(/(?:\r?\n){2,}/gm)[1]);
 
-      - name: 💬 Post Comment
+      - name: Post Comment
         run: |
           gh issue comment $ISSUE -b "Repository: [$REPOSITORY](https://github.com/$REPOSITORY) <br><br> <sub>This is an automated message, do not reply to this comment.</sub>"
         env:

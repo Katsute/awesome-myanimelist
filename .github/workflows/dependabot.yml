@@ -1,20 +1,20 @@
-name: ✔️ Approve Dependabot Pull Request
+name: Approve Dependabot Pull Request
 on:
   pull_request_target:
     types: [opened, synchronize, reopened]
 
 jobs:
   approve:
-    name: ✔️ Approve Dependabot Pull Request
+    name: Approve Dependabot Pull Request
     runs-on: ubuntu-latest
     if: github.event.pull_request.user.login == 'dependabot[bot]'
     steps:
-      - name: 📤 Checkout Repository
+      - name: Checkout Repository
         uses: actions/checkout@v3
         with:
           token: ${{ secrets.TOKEN }}
 
-      - name: ✔️ Approve Dependabot Pull Request
+      - name: Approve Dependabot Pull Request
         run: gh pr review $ISSUE --approve
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}

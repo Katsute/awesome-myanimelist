@@ -1,4 +1,4 @@
-name: 🔄 README Update
+name: README Update
 
 on:
   workflow_dispatch:
@@ -8,21 +8,21 @@ on:
 
 jobs:
   item:
-    name: 🔄 Update README
+    name: Update README
     runs-on: ubuntu-latest
     steps:
-      - name: 📤 Checkout Repository
+      - name: Checkout Repository
         uses: actions/checkout@v3
         with:
           token: ${{ secrets.TOKEN }}
 
-      - name: 📚 Install Node
+      - name: Install Node
         uses: actions/setup-node@v3
         with:
           architecture: x64
-          node-version: 19
+          node-version: 20
 
-      - name: ➕ Write Changes
+      - name: Write Changes
         uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.TOKEN }}
@@ -75,7 +75,7 @@ jobs:
 
             fs.writeFileSync(README, fs.readFileSync(README, "utf-8").replace(/(?<=<!-- CONTENT -->\n).*(?=\n?<!-- \/CONTENT -->)/gms, buf + '\n').trim());
 
-      - name: 📥 Commit Changes
+      - name: Commit Changes
         run: |
           git config --global user.name "Mashiro"
           git config --global user.email "107276926+mashiro-san@users.noreply.github.com"

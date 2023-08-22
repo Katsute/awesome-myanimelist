@@ -1,4 +1,4 @@
-name: ➕ Change Request
+name: Change Request
 
 on:
   workflow_dispatch:
@@ -14,21 +14,21 @@ on:
 
 jobs:
   item:
-    name: ➕ Change Request
+    name: Change Request
     runs-on: ubuntu-latest
     steps:
-      - name: 📤 Checkout Repository
+      - name: Checkout Repository
         uses: actions/checkout@v3
         with:
           token: ${{ secrets.TOKEN }}
 
-      - name: 📚 Install Node
+      - name: Install Node
         uses: actions/setup-node@v3
         with:
           architecture: x64
-          node-version: 19
+          node-version: 20
 
-      - name: ✔️ Verify Branch Name
+      - name: Verify Branch Name
         uses: actions/github-script@v6
         env:
           BRANCH: ${{ github.event.inputs.repository }}
@@ -37,13 +37,13 @@ jobs:
           script: |
             core.exportVariable("BRANCH", "repository/" + process.env.BRANCH.replace(/[^\w]/gm, '-').toLowerCase());
 
-      - name: ➕ Checkout New Branch
+      - name: Checkout New Branch
         env:
           BRANCH: ${{ env.BRANCH }}
         run: |
           git checkout -B "$BRANCH"
 
-      - name: ➕ Write Changes
+      - name: Write Changes
         uses: actions/github-script@v6
         env:
           REPOSITORY: ${{ github.event.inputs.repository }}
@@ -73,7 +73,7 @@ jobs:
 
             fs.writeFileSync(file, JSON.stringify(data, null, 4));
 
-      - name: 📥 Commit Changes
+      - name: Commit Changes
         env:
           REPOSITORY: ${{ github.event.inputs.repository }}
         run: |
@@ -83,13 +83,13 @@ jobs:
           git commit -m "Modify '$REPOSITORY'"
           git push origin HEAD
 
-      - name: 🟣 Create PR
+      - name: Create PR
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
           REPOSITORY: ${{ github.event.inputs.repository }}
         run: gh pr create -l "change request" -t "[Change] $REPOSITORY" -b "Automated change request for [$REPOSITORY](https://github.com/$REPOSITORY)" -a "Katsute"
 
-      - name: 🚀 Dispatch README
+      - name: Dispatch README
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
           BRANCH: ${{ env.BRANCH }}

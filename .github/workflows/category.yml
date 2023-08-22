@@ -1,4 +1,4 @@
-name: ➕ New Category
+name: New Category
 
 on:
   workflow_dispatch:
@@ -10,21 +10,21 @@ on:
 
 jobs:
   item:
-    name: ➕ New Category
+    name: New Category
     runs-on: ubuntu-latest
     steps:
-      - name: 📤 Checkout Repository
+      - name: Checkout Repository
         uses: actions/checkout@v3
         with:
           token: ${{ secrets.TOKEN }}
 
-      - name: 📚 Install Node
+      - name: Install Node
         uses: actions/setup-node@v3
         with:
           architecture: x64
-          node-version: 19
+          node-version: 20
 
-      - name: ✔️ Verify Branch Name
+      - name: Verify Branch Name
         uses: actions/github-script@v6
         env:
           BRANCH: ${{ github.event.inputs.category }}
@@ -33,13 +33,13 @@ jobs:
           script: |
             core.exportVariable("BRANCH", "category/" + process.env.BRANCH.replace(/[^\w]/gm, '-').toLowerCase());
 
-      - name: ➕ Checkout New Branch
+      - name: Checkout New Branch
         env:
           BRANCH: ${{ env.BRANCH }}
         run: |
           git checkout -B "$BRANCH"
 
-      - name: ➕ Write Changes
+      - name: Write Changes
         uses: actions/github-script@v6
         env:
           CATEGORY: ${{ github.event.inputs.category }}
@@ -67,7 +67,7 @@ jobs:
             const change = path.join(__dirname, ".github", "ISSUE_TEMPLATE", "2-change.yml");
             fs.writeFileSync(change, (fs.readFileSync(change, "utf-8").replace(/options: ?\[.*]/gm, `options: [${data.join(", ")}]`)));
 
-      - name: 📥 Commit Changes
+      - name: Commit Changes
         env:
           CATEGORY: ${{ github.event.inputs.category }}
         run: |
@@ -77,13 +77,13 @@ jobs:
           git commit -m "Add new category '$CATEGORY'"
           git push origin HEAD
 
-      - name: 🟣 Create PR
+      - name: Create PR
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
           CATEGORY: ${{ github.event.inputs.category }}
         run: gh pr create -l "category request" -t "[New Category] $CATEGORY" -b "Automated category request for '$CATEGORY'" -a "Katsute"
 
-      - name: 🚀 Dispatch README
+      - name: Dispatch README
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
           BRANCH: ${{ env.BRANCH }}

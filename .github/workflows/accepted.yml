@@ -1,4 +1,4 @@
-name: ✔️ Accepted Change
+name: Accepted Change
 
 on:
   issues:
@@ -6,16 +6,16 @@ on:
 
 jobs:
   category:
-    name: ✔️ Accepted Category
+    name: Accepted Category
     runs-on: ubuntu-latest
     if: contains(github.event.issue.labels.*.name, 'accepted') && contains(github.event.issue.labels.*.name, 'category request')
     steps:
-      - name: 📤 Checkout Repository
+      - name: Checkout Repository
         uses: actions/checkout@v3
         with:
           token: ${{ secrets.TOKEN }}
 
-      - name: 📄 Parse Body
+      - name: Parse Body
         uses: actions/github-script@v6
         env:
           BODY: ${{ github.event.issue.body }}
@@ -23,23 +23,23 @@ jobs:
           github-token: ${{ secrets.TOKEN }}
           script: core.exportVariable("CATEGORY", process.env.BODY.split(/(?:\r?\n){2,}/gm)[1]);
 
-      - name: 🚀 Dispatch Workflow
+      - name: Dispatch Workflow
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
           CATEGORY: ${{ env.CATEGORY }}
         run: gh workflow run category.yml -f category=$CATEGORY
 
   item:
-    name: ✔️ Accepted Repository
+    name: Accepted Repository
     runs-on: ubuntu-latest
     if: contains(github.event.issue.labels.*.name, 'accepted') && contains(github.event.issue.labels.*.name, 'repository request')
     steps:
-      - name: 📤 Checkout Repository
+      - name: Checkout Repository
         uses: actions/checkout@v3
         with:
           token: ${{ secrets.TOKEN }}
 
-      - name: 📄 Parse Body
+      - name: Parse Body
         uses: actions/github-script@v6
         env:
           BODY: ${{ github.event.issue.body }}
@@ -49,7 +49,7 @@ jobs:
             core.exportVariable("REPOSITORY", process.env.BODY.split(/(?:\r?\n){2,}/gm)[1]);
             core.exportVariable("CATEGORY", process.env.BODY.split(/(?:\r?\n){2,}/gm)[3].replace(/ /gm, ""));
 
-      - name: 🚀 Dispatch Workflow
+      - name: Dispatch Workflow
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
           REPOSITORY: ${{ env.REPOSITORY }}
@@ -57,16 +57,16 @@ jobs:
         run: gh workflow run repository.yml -f repository=$REPOSITORY -f category=$CATEGORY
 
   change:
-    name: ✔️ Accepted Change
+    name: Accepted Change
     runs-on: ubuntu-latest
     if: contains(github.event.issue.labels.*.name, 'accepted') && contains(github.event.issue.labels.*.name, 'change request')
     steps:
-      - name: 📤 Checkout Repository
+      - name: Checkout Repository
         uses: actions/checkout@v3
         with:
           token: ${{ secrets.TOKEN }}
 
-      - name: 📄 Parse Body
+      - name: Parse Body
         uses: actions/github-script@v6
         env:
           BODY: ${{ github.event.issue.body }}
@@ -76,7 +76,7 @@ jobs:
             core.exportVariable("REPOSITORY", process.env.BODY.split(/(?:\r?\n){2,}/gm)[1]);
             core.exportVariable("CATEGORY", process.env.BODY.split(/(?:\r?\n){2,}/gm)[5].replace(/ /gm, ""));
 
-      - name: 🚀 Dispatch Workflow
+      - name: Dispatch Workflow
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
           REPOSITORY: ${{ env.REPOSITORY }}
