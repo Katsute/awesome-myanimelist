@@ -1,5 +1,11 @@
 [
     {
+        "repository": "9elt/Reko",
+        "category": [
+            "Website"
+        ]
+    },
+    {
         "repository": "axiel7/MoeList",
         "category": [
             "Android",
