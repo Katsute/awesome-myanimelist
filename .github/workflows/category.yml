@@ -19,7 +19,7 @@ jobs:
           token: ${{ secrets.TOKEN }}
 
       - name: Install Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           architecture: x64
           node-version: 20
