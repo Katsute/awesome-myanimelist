@@ -16,7 +16,7 @@ jobs:
           token: ${{ secrets.TOKEN }}
 
       - name: Parse Body
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         env:
           BODY: ${{ github.event.issue.body }}
         with:
