@@ -20,7 +20,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install Node
         uses: actions/setup-node@v4
@@ -33,14 +33,14 @@ jobs:
         env:
           BRANCH: ${{ github.event.inputs.repository }}
         with:
-          github-token: ${{ secrets.TOKEN }}
-          script: |
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |-
             core.exportVariable("BRANCH", "repository/" + process.env.BRANCH.replace(/[^\w]/gm, '-').toLowerCase());
 
       - name: Checkout New Branch
         env:
           BRANCH: ${{ env.BRANCH }}
-        run: |
+        run: |-
           git checkout -B "$BRANCH"
 
       - name: Write Changes
@@ -49,8 +49,8 @@ jobs:
           REPOSITORY: ${{ github.event.inputs.repository }}
           CATEGORY: ${{ github.event.inputs.category }}
         with:
-          github-token: ${{ secrets.TOKEN }}
-          script: |
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |-
             const fs = require("fs");
             const path = require("path");
             const __dirname = path.resolve();
@@ -75,21 +75,21 @@ jobs:
       - name: Commit Changes
         env:
           REPOSITORY: ${{ github.event.inputs.repository }}
-        run: |
-          git config --global user.name "Mashiro"
-          git config --global user.email "107276926+mashiro-san@users.noreply.github.com"
+        run: |-
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -u
           git commit -m "Add new repository '$REPOSITORY'"
           git push origin HEAD
 
       - name: Create PR
         env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPOSITORY: ${{ github.event.inputs.repository }}
         run: gh pr create -l "repository request" -t "[New Repository] $REPOSITORY" -b "Automated repository request for [$REPOSITORY](https://github.com/$REPOSITORY)" -a "Katsute"
 
       - name: Dispatch README
         env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: ${{ env.BRANCH }}
         run: gh workflow run update.yml -r "$BRANCH"

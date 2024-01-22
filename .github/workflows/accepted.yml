@@ -13,19 +13,19 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Parse Body
         uses: actions/github-script@v7
         env:
           BODY: ${{ github.event.issue.body }}
         with:
-          github-token: ${{ secrets.TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: core.exportVariable("CATEGORY", process.env.BODY.split(/(?:\r?\n){2,}/gm)[1]);
 
       - name: Dispatch Workflow
         env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CATEGORY: ${{ env.CATEGORY }}
         run: gh workflow run category.yml -f category=$CATEGORY
 
@@ -37,21 +37,21 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Parse Body
         uses: actions/github-script@v7
         env:
           BODY: ${{ github.event.issue.body }}
         with:
-          github-token: ${{ secrets.TOKEN }}
-          script: |
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |-
             core.exportVariable("REPOSITORY", process.env.BODY.split(/(?:\r?\n){2,}/gm)[1]);
             core.exportVariable("CATEGORY", process.env.BODY.split(/(?:\r?\n){2,}/gm)[3].replace(/ /gm, ""));
 
       - name: Dispatch Workflow
         env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPOSITORY: ${{ env.REPOSITORY }}
           CATEGORY: ${{ env.CATEGORY }}
         run: gh workflow run repository.yml -f repository=$REPOSITORY -f category=$CATEGORY
@@ -64,21 +64,21 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Parse Body
         uses: actions/github-script@v7
         env:
           BODY: ${{ github.event.issue.body }}
         with:
-          github-token: ${{ secrets.TOKEN }}
-          script: |
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |-
             core.exportVariable("REPOSITORY", process.env.BODY.split(/(?:\r?\n){2,}/gm)[1]);
             core.exportVariable("CATEGORY", process.env.BODY.split(/(?:\r?\n){2,}/gm)[5].replace(/ /gm, ""));
 
       - name: Dispatch Workflow
         env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPOSITORY: ${{ env.REPOSITORY }}
           CATEGORY: ${{ env.CATEGORY }}
         run: gh workflow run change.yml -f repository=$REPOSITORY -f category=$CATEGORY
