@@ -40,7 +40,7 @@
 
 <h3><a href="https://github.com/axiel7"><img src="https://avatars.githubusercontent.com/u/12379835?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/axiel7/MoeList">axiel7/MoeList</a></h3>
 
-<sup>Kotlin • ⭐ 462 • Updated June 9, 2024
+<sup>Kotlin • ⭐ 465 • Updated June 16, 2024
 
 Another unofficial Android MAL client
 
@@ -68,7 +68,7 @@ A simple, easy to use MyAnimeList android client alternative.
 
 <h3><a href="https://github.com/MALSync"><img src="https://avatars.githubusercontent.com/u/63724565?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/MALSync/MALSync">MALSync/MALSync</a></h3>
 
-<sup>TypeScript • ⭐ 2014 • Updated June 8, 2024
+<sup>TypeScript • ⭐ 2023 • Updated June 14, 2024
 
 Integrates MyAnimeList/AniList/Kitsu/Simkl into various sites, with auto episode tracking.
 
@@ -84,7 +84,7 @@ Not so small client app for Myanimelist.net - Windows 10 UWP & Android
 
 <h3><a href="https://github.com/erengy"><img src="https://avatars.githubusercontent.com/u/1078430?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/erengy/taiga">erengy/taiga</a></h3>
 
-<sup>C++ • ⭐ 2033 • Updated May 26, 2024
+<sup>C++ • ⭐ 2034 • Updated June 14, 2024
 
 A lightweight anime tracker for Windows
 
@@ -110,7 +110,7 @@ Easy customisation of list designs for MyAnimeList.
 
 <h3><a href="https://github.com/axiel7"><img src="https://avatars.githubusercontent.com/u/12379835?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/axiel7/MoeList">axiel7/MoeList</a></h3>
 
-<sup>Kotlin • ⭐ 462 • Updated June 9, 2024
+<sup>Kotlin • ⭐ 465 • Updated June 16, 2024
 
 Another unofficial Android MAL client
 
@@ -128,7 +128,7 @@ Not so small client app for Myanimelist.net - Windows 10 UWP & Android
 
 <h3><a href="https://github.com/erengy"><img src="https://avatars.githubusercontent.com/u/1078430?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/erengy/taiga">erengy/taiga</a></h3>
 
-<sup>C++ • ⭐ 2033 • Updated May 26, 2024
+<sup>C++ • ⭐ 2034 • Updated June 14, 2024
 
 A lightweight anime tracker for Windows
 
@@ -140,7 +140,7 @@ MyAnimeList web client with trakt.tv, AniList, Kitsu, SIMKL, Annict and LiveChar
 
 <h3><a href="https://github.com/MALSync"><img src="https://avatars.githubusercontent.com/u/63724565?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/MALSync/MALSync">MALSync/MALSync</a></h3>
 
-<sup>TypeScript • ⭐ 2014 • Updated June 8, 2024
+<sup>TypeScript • ⭐ 2023 • Updated June 14, 2024
 
 Integrates MyAnimeList/AniList/Kitsu/Simkl into various sites, with auto episode tracking.
 
@@ -186,7 +186,7 @@ Scrape everything you can from MyAnimeList.net
 
 <h3><a href="https://github.com/nstratos"><img src="https://avatars.githubusercontent.com/u/3655711?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/nstratos/go-myanimelist">nstratos/go-myanimelist</a></h3>
 
-<sup>Go • ⭐ 39 • Updated April 24, 2024
+<sup>Go • ⭐ 38 • Updated April 24, 2024
 
 Go library for accessing the MyAnimeList API: https://myanimelist.net/apiconfig/references/api/v2
 
@@ -202,7 +202,7 @@ Cluster and visualize relationships between anime on MyAnimeList
 
 <h3><a href="https://github.com/MAL-Dubs"><img src="https://avatars.githubusercontent.com/u/89120441?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/MAL-Dubs/MAL-Dubs">MAL-Dubs/MAL-Dubs</a></h3>
 
-<sup>JavaScript • ⭐ 35 • Updated June 8, 2024
+<sup>JavaScript • ⭐ 35 • Updated June 16, 2024
 
 MAL Dubs is a userscript which labels over 4800 English dubbed titles on MyAnimeList.net and adds a Dub Only filter to search, seasonal and top anime pages.
 
@@ -224,7 +224,7 @@ MyAnimeList web client with trakt.tv, AniList, Kitsu, SIMKL, Annict and LiveChar
 
 <h3><a href="https://github.com/rl404"><img src="https://avatars.githubusercontent.com/u/8389774?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/rl404/sekai">rl404/sekai</a></h3>
 
-<sup>TypeScript • ⭐ 10 • Updated June 6, 2024
+<sup>TypeScript • ⭐ 10 • Updated June 13, 2024
 
 Convert your MyAnimeList anime list to force-directed graph and see your anime world.
 
