@@ -40,7 +40,7 @@
 
 <h3><a href="https://github.com/axiel7"><img src="https://avatars.githubusercontent.com/u/12379835?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/axiel7/MoeList">axiel7/MoeList</a></h3>
 
-<sup>Kotlin • ⭐ 481 • Updated July 14, 2024
+<sup>Kotlin • ⭐ 485 • Updated July 17, 2024
 
 Another unofficial Android MAL client
 
@@ -52,7 +52,7 @@ Sushi is a modern and minimal android client for MyAnimeList
 
 <h3><a href="https://github.com/Drutol"><img src="https://avatars.githubusercontent.com/u/6102530?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/Drutol/MALClient">Drutol/MALClient</a></h3>
 
-<sup>C# • ⭐ 349 • Updated December 5, 2023
+<sup>C# • ⭐ 350 • Updated December 5, 2023
 
 Not so small client app for Myanimelist.net - Windows 10 UWP & Android
 
@@ -68,7 +68,7 @@ A simple, easy to use MyAnimeList android client alternative.
 
 <h3><a href="https://github.com/MALSync"><img src="https://avatars.githubusercontent.com/u/63724565?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/MALSync/MALSync">MALSync/MALSync</a></h3>
 
-<sup>TypeScript • ⭐ 2051 • Updated July 13, 2024
+<sup>TypeScript • ⭐ 2053 • Updated July 20, 2024
 
 Integrates MyAnimeList/AniList/Kitsu/Simkl into various sites, with auto episode tracking.
 
@@ -78,7 +78,7 @@ Integrates MyAnimeList/AniList/Kitsu/Simkl into various sites, with auto episode
 
 <h3><a href="https://github.com/Drutol"><img src="https://avatars.githubusercontent.com/u/6102530?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/Drutol/MALClient">Drutol/MALClient</a></h3>
 
-<sup>C# • ⭐ 349 • Updated December 5, 2023
+<sup>C# • ⭐ 350 • Updated December 5, 2023
 
 Not so small client app for Myanimelist.net - Windows 10 UWP & Android
 
@@ -110,7 +110,7 @@ Easy customisation of list designs for MyAnimeList.
 
 <h3><a href="https://github.com/axiel7"><img src="https://avatars.githubusercontent.com/u/12379835?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/axiel7/MoeList">axiel7/MoeList</a></h3>
 
-<sup>Kotlin • ⭐ 481 • Updated July 14, 2024
+<sup>Kotlin • ⭐ 485 • Updated July 17, 2024
 
 Another unofficial Android MAL client
 
@@ -122,7 +122,7 @@ Sushi is a modern and minimal android client for MyAnimeList
 
 <h3><a href="https://github.com/Drutol"><img src="https://avatars.githubusercontent.com/u/6102530?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/Drutol/MALClient">Drutol/MALClient</a></h3>
 
-<sup>C# • ⭐ 349 • Updated December 5, 2023
+<sup>C# • ⭐ 350 • Updated December 5, 2023
 
 Not so small client app for Myanimelist.net - Windows 10 UWP & Android
 
@@ -134,13 +134,13 @@ A lightweight anime tracker for Windows
 
 <h3><a href="https://github.com/infanf"><img src="https://avatars.githubusercontent.com/u/8826710?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/infanf/myanili">infanf/myanili</a></h3>
 
-<sup>TypeScript • ⭐ 15 • Updated July 8, 2024
+<sup>TypeScript • ⭐ 15 • Updated July 18, 2024
 
 MyAnimeList web client with trakt.tv, AniList, Kitsu, SIMKL, Annict and LiveChart integration
 
 <h3><a href="https://github.com/MALSync"><img src="https://avatars.githubusercontent.com/u/63724565?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/MALSync/MALSync">MALSync/MALSync</a></h3>
 
-<sup>TypeScript • ⭐ 2051 • Updated July 13, 2024
+<sup>TypeScript • ⭐ 2053 • Updated July 20, 2024
 
 Integrates MyAnimeList/AniList/Kitsu/Simkl into various sites, with auto episode tracking.
 
@@ -168,13 +168,13 @@ A local MyAnimeList API
 
 <h3><a href="https://github.com/jikan-me"><img src="https://avatars.githubusercontent.com/u/30051078?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/jikan-me/jikan">jikan-me/jikan</a></h3>
 
-<sup>PHP • ⭐ 852 • Updated June 29, 2024
+<sup>PHP • ⭐ 854 • Updated June 29, 2024
 
 Unofficial MyAnimeList PHP+REST API which provides functions other than the official API
 
 <h3><a href="https://github.com/KatsuteDev"><img src="https://avatars.githubusercontent.com/u/87244777?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/KatsuteDev/Mal4J">KatsuteDev/Mal4J</a></h3>
 
-<sup>Java • ⭐ 38 • Updated July 2, 2024
+<sup>Java • ⭐ 41 • Updated July 16, 2024
 
 Java wrapper for the official MyAnimeList API
 
@@ -186,7 +186,7 @@ Scrape everything you can from MyAnimeList.net
 
 <h3><a href="https://github.com/nstratos"><img src="https://avatars.githubusercontent.com/u/3655711?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/nstratos/go-myanimelist">nstratos/go-myanimelist</a></h3>
 
-<sup>Go • ⭐ 38 • Updated April 24, 2024
+<sup>Go • ⭐ 39 • Updated April 24, 2024
 
 Go library for accessing the MyAnimeList API: https://myanimelist.net/apiconfig/references/api/v2
 
@@ -202,7 +202,7 @@ Cluster and visualize relationships between anime on MyAnimeList
 
 <h3><a href="https://github.com/MAL-Dubs"><img src="https://avatars.githubusercontent.com/u/89120441?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/MAL-Dubs/MAL-Dubs">MAL-Dubs/MAL-Dubs</a></h3>
 
-<sup>JavaScript • ⭐ 34 • Updated July 13, 2024
+<sup>JavaScript • ⭐ 34 • Updated July 17, 2024
 
 MAL Dubs is a userscript which labels over 4800 English dubbed titles on MyAnimeList.net and adds a Dub Only filter to search, seasonal and top anime pages.
 
@@ -218,13 +218,13 @@ Web API to match similar MyAnimeList users and get anime recommendations
 
 <h3><a href="https://github.com/infanf"><img src="https://avatars.githubusercontent.com/u/8826710?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/infanf/myanili">infanf/myanili</a></h3>
 
-<sup>TypeScript • ⭐ 15 • Updated July 8, 2024
+<sup>TypeScript • ⭐ 15 • Updated July 18, 2024
 
 MyAnimeList web client with trakt.tv, AniList, Kitsu, SIMKL, Annict and LiveChart integration
 
 <h3><a href="https://github.com/rl404"><img src="https://avatars.githubusercontent.com/u/8389774?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/rl404/sekai">rl404/sekai</a></h3>
 
-<sup>TypeScript • ⭐ 10 • Updated July 13, 2024
+<sup>TypeScript • ⭐ 10 • Updated July 21, 2024
 
 Convert your MyAnimeList anime list to force-directed graph and see your anime world.
 
