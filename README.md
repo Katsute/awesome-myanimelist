@@ -40,7 +40,7 @@
 
 <h3><a href="https://github.com/axiel7"><img src="https://avatars.githubusercontent.com/u/12379835?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/axiel7/MoeList">axiel7/MoeList</a></h3>
 
-<sup>Kotlin • ⭐ 535 • Updated January 26, 2025
+<sup>Kotlin • ⭐ 536 • Updated February 2, 2025
 
 Another unofficial Android MAL client
 
@@ -68,7 +68,7 @@ A simple, easy to use MyAnimeList android client alternative.
 
 <h3><a href="https://github.com/MALSync"><img src="https://avatars.githubusercontent.com/u/63724565?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/MALSync/MALSync">MALSync/MALSync</a></h3>
 
-<sup>TypeScript • ⭐ 2322 • Updated January 26, 2025
+<sup>TypeScript • ⭐ 2331 • Updated January 30, 2025
 
 Integrates MyAnimeList/AniList/Kitsu/Simkl into various sites, with auto episode tracking.
 
@@ -110,7 +110,7 @@ Easy customisation of list designs for MyAnimeList.
 
 <h3><a href="https://github.com/axiel7"><img src="https://avatars.githubusercontent.com/u/12379835?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/axiel7/MoeList">axiel7/MoeList</a></h3>
 
-<sup>Kotlin • ⭐ 535 • Updated January 26, 2025
+<sup>Kotlin • ⭐ 536 • Updated February 2, 2025
 
 Another unofficial Android MAL client
 
@@ -140,7 +140,7 @@ MyAnimeList web client with trakt.tv, AniList, Kitsu, SIMKL, Annict and LiveChar
 
 <h3><a href="https://github.com/MALSync"><img src="https://avatars.githubusercontent.com/u/63724565?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/MALSync/MALSync">MALSync/MALSync</a></h3>
 
-<sup>TypeScript • ⭐ 2322 • Updated January 26, 2025
+<sup>TypeScript • ⭐ 2331 • Updated January 30, 2025
 
 Integrates MyAnimeList/AniList/Kitsu/Simkl into various sites, with auto episode tracking.
 
@@ -168,7 +168,7 @@ A local MyAnimeList API
 
 <h3><a href="https://github.com/jikan-me"><img src="https://avatars.githubusercontent.com/u/30051078?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/jikan-me/jikan">jikan-me/jikan</a></h3>
 
-<sup>PHP • ⭐ 902 • Updated January 6, 2025
+<sup>PHP • ⭐ 905 • Updated January 6, 2025
 
 Unofficial MyAnimeList PHP+REST API which provides functions other than the official API
 
@@ -202,7 +202,7 @@ Cluster and visualize relationships between anime on MyAnimeList
 
 <h3><a href="https://github.com/MAL-Dubs"><img src="https://avatars.githubusercontent.com/u/89120441?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/MAL-Dubs/MAL-Dubs">MAL-Dubs/MAL-Dubs</a></h3>
 
-<sup>JavaScript • ⭐ 40 • Updated January 21, 2025
+<sup>JavaScript • ⭐ 40 • Updated January 30, 2025
 
 MAL Dubs is a userscript which labels over 5000 English dubbed titles on MyAnimeList.net and adds a Dubbed filter to search, seasonal and top anime pages.
 
@@ -212,7 +212,7 @@ MAL Dubs is a userscript which labels over 5000 English dubbed titles on MyAnime
 
 <h3><a href="https://github.com/9elt"><img src="https://avatars.githubusercontent.com/u/102952974?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/9elt/Reko">9elt/Reko</a></h3>
 
-<sup>Rust • ⭐ 9 • Updated August 9, 2024
+<sup>Rust • ⭐ 10 • Updated August 9, 2024
 
 Web API to match similar MyAnimeList users and get anime recommendations
 
@@ -224,7 +224,7 @@ MyAnimeList web client with trakt.tv, AniList, Kitsu, SIMKL, Annict and LiveChar
 
 <h3><a href="https://github.com/rl404"><img src="https://avatars.githubusercontent.com/u/8389774?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/rl404/sekai">rl404/sekai</a></h3>
 
-<sup>TypeScript • ⭐ 10 • Updated January 22, 2025
+<sup>TypeScript • ⭐ 10 • Updated February 1, 2025
 
 Convert your MyAnimeList anime list to force-directed graph and see your anime world.
 
