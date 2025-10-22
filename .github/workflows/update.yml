@@ -17,7 +17,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install Node
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           architecture: x64
           node-version: 20
