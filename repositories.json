@@ -54,6 +54,12 @@
         ]
     },
     {
+        "repository": "JICA98/DailyAL",
+        "category": [
+            "Client"
+        ]
+    },
+    {
         "repository": "jikan-me/jikan",
         "category": [
             "Programming"
