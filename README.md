@@ -40,7 +40,7 @@
 
 <h3><a href="https://github.com/axiel7"><img src="https://avatars.githubusercontent.com/u/12379835?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/axiel7/MoeList">axiel7/MoeList</a></h3>
 
-<sup>Kotlin • ⭐ 619 • Updated February 1, 2026
+<sup>Kotlin • ⭐ 622 • Updated February 8, 2026
 
 Another unofficial Android MAL client
 
@@ -68,7 +68,7 @@ A simple, easy to use MyAnimeList android client alternative.
 
 <h3><a href="https://github.com/MALSync"><img src="https://avatars.githubusercontent.com/u/63724565?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/MALSync/MALSync">MALSync/MALSync</a></h3>
 
-<sup>TypeScript • ⭐ 2752 • Updated January 30, 2026
+<sup>TypeScript • ⭐ 2754 • Updated February 8, 2026
 
 Integrates MyAnimeList/AniList/Kitsu/Simkl into various sites, with auto episode tracking.
 
@@ -90,7 +90,7 @@ A lightweight anime tracker for Windows
 
 <h3><a href="https://github.com/JICA98"><img src="https://avatars.githubusercontent.com/u/44204157?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/JICA98/DailyAL">JICA98/DailyAL</a></h3>
 
-<sup>Dart • ⭐ 259 • Updated January 26, 2026
+<sup>Dart • ⭐ 270 • Updated February 8, 2026
 
 DailyAL - MyAnimeList Client
 
@@ -100,7 +100,7 @@ DailyAL - MyAnimeList Client
 
 <h3><a href="https://github.com/ValerioLyndon"><img src="https://avatars.githubusercontent.com/u/29792052?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/ValerioLyndon/MAL-Public-List-Designs">ValerioLyndon/MAL-Public-List-Designs</a></h3>
 
-<sup>CSS • ⭐ 115 • Updated April 16, 2025
+<sup>CSS • ⭐ 116 • Updated April 16, 2025
 
 MyAnimeList designs available for anyone to use.
 
@@ -116,7 +116,7 @@ Easy customisation of list designs for MyAnimeList.
 
 <h3><a href="https://github.com/axiel7"><img src="https://avatars.githubusercontent.com/u/12379835?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/axiel7/MoeList">axiel7/MoeList</a></h3>
 
-<sup>Kotlin • ⭐ 619 • Updated February 1, 2026
+<sup>Kotlin • ⭐ 622 • Updated February 8, 2026
 
 Another unofficial Android MAL client
 
@@ -146,7 +146,7 @@ MyAnimeList web client with trakt.tv, AniList, Kitsu, aniSearch, Shikimori, Mang
 
 <h3><a href="https://github.com/MALSync"><img src="https://avatars.githubusercontent.com/u/63724565?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/MALSync/MALSync">MALSync/MALSync</a></h3>
 
-<sup>TypeScript • ⭐ 2752 • Updated January 30, 2026
+<sup>TypeScript • ⭐ 2754 • Updated February 8, 2026
 
 Integrates MyAnimeList/AniList/Kitsu/Simkl into various sites, with auto episode tracking.
 
@@ -208,7 +208,7 @@ Cluster and visualize relationships between anime on MyAnimeList
 
 <h3><a href="https://github.com/MAL-Dubs"><img src="https://avatars.githubusercontent.com/u/89120441?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/MAL-Dubs/MAL-Dubs">MAL-Dubs/MAL-Dubs</a></h3>
 
-<sup>JavaScript • ⭐ 51 • Updated January 31, 2026
+<sup>JavaScript • ⭐ 51 • Updated February 7, 2026
 
 MAL Dubs is a userscript which labels over 5300 English dubbed titles on MyAnimeList.net and adds a Dubbed filter to search, seasonal and top anime pages.
 
@@ -230,7 +230,7 @@ MyAnimeList web client with trakt.tv, AniList, Kitsu, aniSearch, Shikimori, Mang
 
 <h3><a href="https://github.com/rl404"><img src="https://avatars.githubusercontent.com/u/8389774?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/rl404/sekai">rl404/sekai</a></h3>
 
-<sup>TypeScript • ⭐ 11 • Updated January 31, 2026
+<sup>TypeScript • ⭐ 11 • Updated February 5, 2026
 
 Convert your MyAnimeList anime list to force-directed graph and see your anime world.
 
