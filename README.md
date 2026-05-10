@@ -40,7 +40,7 @@
 
 <h3><a href="https://github.com/axiel7"><img src="https://avatars.githubusercontent.com/u/12379835?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/axiel7/MoeList">axiel7/MoeList</a></h3>
 
-<sup>Kotlin • ⭐ 637 • Updated April 28, 2026
+<sup>Kotlin • ⭐ 637 • Updated May 6, 2026
 
 Another unofficial Android MAL client
 
@@ -68,7 +68,7 @@ A simple, easy to use MyAnimeList android client alternative.
 
 <h3><a href="https://github.com/MALSync"><img src="https://avatars.githubusercontent.com/u/63724565?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/MALSync/MALSync">MALSync/MALSync</a></h3>
 
-<sup>TypeScript • ⭐ 2837 • Updated May 3, 2026
+<sup>TypeScript • ⭐ 2845 • Updated May 10, 2026
 
 Integrates MyAnimeList/AniList/Kitsu/Simkl into various sites, with auto episode tracking.
 
@@ -84,13 +84,13 @@ Not so small client app for Myanimelist.net - Windows 10 UWP & Android
 
 <h3><a href="https://github.com/erengy"><img src="https://avatars.githubusercontent.com/u/1078430?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/erengy/taiga">erengy/taiga</a></h3>
 
-<sup>C++ • ⭐ 2298 • Updated October 19, 2025
+<sup>C++ • ⭐ 2302 • Updated October 19, 2025
 
 A lightweight anime tracker for Windows
 
 <h3><a href="https://github.com/JICA98"><img src="https://avatars.githubusercontent.com/u/44204157?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/JICA98/DailyAL">JICA98/DailyAL</a></h3>
 
-<sup>Dart • ⭐ 327 • Updated May 2, 2026
+<sup>Dart • ⭐ 330 • Updated May 2, 2026
 
 DailyAL - MyAnimeList Client
 
@@ -100,7 +100,7 @@ DailyAL - MyAnimeList Client
 
 <h3><a href="https://github.com/ValerioLyndon"><img src="https://avatars.githubusercontent.com/u/29792052?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/ValerioLyndon/MAL-Public-List-Designs">ValerioLyndon/MAL-Public-List-Designs</a></h3>
 
-<sup>CSS • ⭐ 115 • Updated April 16, 2025
+<sup>CSS • ⭐ 116 • Updated May 10, 2026
 
 MyAnimeList designs available for anyone to use.
 
@@ -116,7 +116,7 @@ Easy customisation of list designs for MyAnimeList.
 
 <h3><a href="https://github.com/axiel7"><img src="https://avatars.githubusercontent.com/u/12379835?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/axiel7/MoeList">axiel7/MoeList</a></h3>
 
-<sup>Kotlin • ⭐ 637 • Updated April 28, 2026
+<sup>Kotlin • ⭐ 637 • Updated May 6, 2026
 
 Another unofficial Android MAL client
 
@@ -134,19 +134,19 @@ Not so small client app for Myanimelist.net - Windows 10 UWP & Android
 
 <h3><a href="https://github.com/erengy"><img src="https://avatars.githubusercontent.com/u/1078430?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/erengy/taiga">erengy/taiga</a></h3>
 
-<sup>C++ • ⭐ 2298 • Updated October 19, 2025
+<sup>C++ • ⭐ 2302 • Updated October 19, 2025
 
 A lightweight anime tracker for Windows
 
 <h3><a href="https://github.com/infanf"><img src="https://avatars.githubusercontent.com/u/8826710?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/infanf/myanili">infanf/myanili</a></h3>
 
-<sup>TypeScript • ⭐ 20 • Updated April 26, 2026
+<sup>TypeScript • ⭐ 21 • Updated May 9, 2026
 
 MyAnimeList web client with trakt.tv, AniList, Kitsu, aniSearch, Shikimori, Manga-Updates, SIMKL, Annict, MangaBaka and LiveChart integration
 
 <h3><a href="https://github.com/MALSync"><img src="https://avatars.githubusercontent.com/u/63724565?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/MALSync/MALSync">MALSync/MALSync</a></h3>
 
-<sup>TypeScript • ⭐ 2837 • Updated May 3, 2026
+<sup>TypeScript • ⭐ 2845 • Updated May 10, 2026
 
 Integrates MyAnimeList/AniList/Kitsu/Simkl into various sites, with auto episode tracking.
 
@@ -162,7 +162,7 @@ A simple, easy to use MyAnimeList android client alternative.
 
 <h3><a href="https://github.com/Chris-Kode"><img src="https://avatars.githubusercontent.com/u/48736565?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/Chris-Kode/myanimelist-api-v2">Chris-Kode/myanimelist-api-v2</a></h3>
 
-<sup>JavaScript • ⭐ 49 • Updated January 9, 2024
+<sup>JavaScript • ⭐ 50 • Updated January 9, 2024
 
 An awesome wrapper on Nodejs for the new MyAnimeList's API v2!
 
@@ -174,7 +174,7 @@ A local MyAnimeList API
 
 <h3><a href="https://github.com/jikan-me"><img src="https://avatars.githubusercontent.com/u/30051078?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/jikan-me/jikan">jikan-me/jikan</a></h3>
 
-<sup>PHP • ⭐ 1037 • Updated March 14, 2026
+<sup>PHP • ⭐ 1040 • Updated March 14, 2026
 
 Unofficial MyAnimeList PHP+REST API which provides functions other than the official API
 
@@ -208,7 +208,7 @@ Cluster and visualize relationships between anime on MyAnimeList
 
 <h3><a href="https://github.com/MAL-Dubs"><img src="https://avatars.githubusercontent.com/u/89120441?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/MAL-Dubs/MAL-Dubs">MAL-Dubs/MAL-Dubs</a></h3>
 
-<sup>JavaScript • ⭐ 52 • Updated May 2, 2026
+<sup>JavaScript • ⭐ 52 • Updated May 6, 2026
 
 MAL Dubs is a userscript which labels over 5300 English dubbed titles on MyAnimeList.net and adds a Dubbed filter to search, seasonal and top anime pages.
 
@@ -224,13 +224,13 @@ Web API to match similar MyAnimeList users and get anime recommendations
 
 <h3><a href="https://github.com/infanf"><img src="https://avatars.githubusercontent.com/u/8826710?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/infanf/myanili">infanf/myanili</a></h3>
 
-<sup>TypeScript • ⭐ 20 • Updated April 26, 2026
+<sup>TypeScript • ⭐ 21 • Updated May 9, 2026
 
 MyAnimeList web client with trakt.tv, AniList, Kitsu, aniSearch, Shikimori, Manga-Updates, SIMKL, Annict, MangaBaka and LiveChart integration
 
 <h3><a href="https://github.com/rl404"><img src="https://avatars.githubusercontent.com/u/8389774?v=4" width="25" height="25"></a>&nbsp;<a href="https://github.com/rl404/sekai">rl404/sekai</a></h3>
 
-<sup>TypeScript • ⭐ 11 • Updated May 3, 2026
+<sup>TypeScript • ⭐ 11 • Updated May 9, 2026
 
 Convert your MyAnimeList anime list to force-directed graph and see your anime world.
 
